@@ -10,6 +10,15 @@ My name is **Aaron James**, and I am a software engineer from San Diego, Califor
 
 ![photo of me teaching a workshop on web exploitation](/media/image-2.jpg)
 
-*Here I am teaching a workshop on web exploitation. As you can see, I am passionate about education and mentorship.*
+*Here I am teaching a workshop on web exploitation. As you can see, I am passionate about education and mentorship. See my [links](/pages/links) page for more of the resources I use to teach.*
 
-Aenean fermentum, elit eget tincidunt condimentum, eros ipsum rutrum orci, sagittis tempus lacus enim ac dui. Donec non enim in turpis pulvinar facilisis. Ut felis. Praesent dapibus, neque id cursus faucibus, tortor neque egestas augue, eu vulputate magna eros eu erat. Aliquam erat volutpat. Nam dui mi, tincidunt quis, accumsan porttitor, facilisis luctus, metus
+Ever since I taught myself how to program in 2012, I've been facinated with the structure and design of programs. I use this blog to communicate my musings, which may be related to any of the following:
+
+* software design and best practices
+* team management and organizational structure
+* cybersecurity news or educational materials
+* general math and science
+
+Occasionally, I may even ramble on about something else entirely. Stick around and maybe you'll find something you like.
+
+Best way to reach me is [LinkedIn](https://www.linkedin.com/in/aaron-james-eason/).
