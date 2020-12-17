@@ -1,14 +1,14 @@
 'use strict';
 
 module.exports = {
-  url: 'https://lumen.netlify.com',
+  url: 'https://knox.codes',
   pathPrefix: '/',
   title: 'knox.codes',
-  subtitle: 'Pellentesque odio nisi, euismod in, pharetra a, ultricies in, diam. Sed arcu.',
+  subtitle: 'The ramblings of a software engineer, with an emphasis on security.',
   copyright: '© All rights reserved.',
   disqusShortname: '',
   postsPerPage: 4,
-  googleAnalyticsId: 'UA-73379983-2',
+  googleAnalyticsId: '',
   useKatex: false,
   menu: [
     {
@@ -27,17 +27,17 @@ module.exports = {
   author: {
     name: 'Aaron James',
     photo: '/photo.png',
-    bio: 'Pellentesque odio nisi, euismod in, pharetra a, ultricies in, diam. Sed arcu.',
+    bio: 'The ramblings of a software engineer, with an emphasis on security.',
     contacts: {
-      email: '',
-      facebook: '#',
-      telegram: '#',
-      twitter: '#',
-      github: '#',
+      email: 'nick@knox.codes',
+      facebook: '',
+      telegram: '',
+      twitter: '',
+      github: 'knoxdev',
       rss: '',
       vkontakte: '',
-      linkedin: '#',
-      instagram: '#',
+      linkedin: 'aaron-james-eason',
+      instagram: '',
       line: '',
       gitlab: '',
       weibo: '',
