@@ -39,7 +39,7 @@ They are also much shorter and much less expensive than a degree. As a former TA
 
 And all it takes for these companies to solve their own problem is to be willing to pay for this kind of education while their new staff is onboarded in their new cybersecurity role.
 
-We're seeing more and more of this kind of investment in human capital, which is an excellent trend, but unfortunately, the widening of the cybersecurity skill gap still currently outpaces the intake of fresh talent. 
+We're seeing more and more of this kind of investment in human capital, which is an excellent trend, but unfortunately, the widening of the cybersecurity skill gap [still currently outpaces](https://insights.dice.com/2020/08/20/why-the-cybersecurity-skills-gap-continues-to-widen/) the intake of fresh talent. 
 
 By writing this article, I hope to make it more clear to organization that are feeling the effects of the shortage to make the apparently difficult decision to invest in their employees.
 
