@@ -20,10 +20,16 @@ Like all languages, programming is organized into prose and poetry. There's plen
 
 Unfortunately, just like spoken language, sometimes the words of others can offend us. We may disagree on phrasing, structure, or even just denounce the message itself.
 
-I myself have some preferences when it comes to how I write code. These preferences are called paradigms 
+I myself have some preferences when it comes to how I write code. These preferences are called programming paradigms. I myself am a fan of the [functional programming paradigm](https://en.wikipedia.org/wiki/Functional_programming) and [return-early / guard pattern](https://deviq.com/guard-clause/). Maybe someday I can write articles discussing just these concepts at length.
 
-Today, we will perform a case study of a very unique paradigm.
+Today however, we will perform a case study of a very unique, relatively unheard of paradigm.
 
 ![elegant objects homepage](/media/elegant-objects.png)
 
-[Elegant Objects](https://www.elegantobjects.org/#principles) is the paradigm of object-oriented programming turned into a philosophy and taken to its logical conclusion.
+[Elegant Objects](https://www.elegantobjects.org/#principles) is the paradigm of [object-oriented programming](https://en.wikipedia.org/wiki/Object-oriented_programming) turned into a philosophy and taken to its logical conclusion.
+
+One thing I will say before I begin is that they definitely did an excellent job of documenting, explaining, and justifying the individual philosophies that make up the paradigm. If nothing else, Elegant Objects might be the most well-documented programming paradigm ever published.
+
+Let us dive into this documentation to learn more, shall we?
+
+Firstly, some of these individual philosophies are definitely something I agree with strongly. 
