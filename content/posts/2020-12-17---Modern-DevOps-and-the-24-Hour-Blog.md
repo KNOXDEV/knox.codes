@@ -23,4 +23,48 @@ Fortunately for us, the frontend and backend developer's world isn't the only fi
 
 ![a graph of devops areas of concern](/media/devops-graph.png)
 
-WIP
+*Here we are in 2020, and the options available to cut out deployment complexity is astonishing.*
+
+It is with this information in mind that I decided to create this blog. It took less than 24 hours from conception to final deployment, with no prior knowledge about the tools available aside from simple Googling. [Here is the GitHub repository](https://github.com/KNOXDEV/knox.codes) where my code for the website is stored.
+
+This article is a highlight of how modern DevOps technology has enabled the fast, free production of simple websites.
+
+Rather than simply list all of the options available for development and deployment (which would take a long time and not be simple at all), I will simply trace my personal journey in this project, from conception to final product.
+
+---
+
+For this blog, after some short research, I decided on building my website off of the [Gatsby](https://www.gatsbyjs.com/) project, which is a frontend "static" website generator powered by cutting edge web development technology like React.js and GraphQL.
+
+Rather than requiring intimate knowledge of any of these technologies, most Gatsby "starters" (as they are called) give you the ability to add new pages simply by adding a plaintext file to a particular folder. [Here is a link](https://github.com/KNOXDEV/knox.codes/blob/main/content/posts/2020-12-17---Modern-DevOps-and-the-24-Hour-Blog.md) to the file on my repository that's rendering into the blog post you're reading right now. 
+
+Getting this project up and running was as simple as having Node.js installed from the official Node website and running the following commands.
+
+```bash
+npm install -g gatsby-cli
+gatsby new knox.codes https://github.com/alxshelepenok/gatsby-starter-lumen
+cd knox.codes
+npm run develop
+```
+
+These four commands:
+1. Install the Gatsby command
+2. Download the starter template I chose into a new folder and configured it for me
+3. Moved my current context into the newly created knox.codes project folder
+4. Built the website and started up the interactive development server
+
+Now, I was able to make edits to the markdown files in [these folders](https://github.com/KNOXDEV/knox.codes/tree/main/content) to see my newly changed website, updated in my browser automatically and side-by-side.
+
+That was it. Minus some other minor tweaks, that was all it took to get my website fully developed. No code necessary.
+
+Lastly, to deploy my website to my domain, knox.codes. For this, my Gatsby project already had a built-in integration with a deployment service called **Netlify**.
+
+What this actually means is that I followed [this guide](https://www.netlify.com/blog/2016/02/24/a-step-by-step-guide-gatsby-on-netlify/) for approximately 5 minutes and then my website was up and running on my domain, just like I needed it to be. I won't go into too much detail, but once I had configured my Netlify account for free, I can automatically update my website in under 5 minutes by typing the following to commit my changes:
+
+```bash
+git commit -a -m "new changes"
+git push
+```
+
+Everything else is automatic.
+
+If there's anything this experience has taught me, its that yes, I should have developed my own website much sooner. Hopefully now, you will too. 

@@ -10,13 +10,37 @@ tags:
   - "Training"
   - "Education"
 description: "What is the Cybersecurity skills gap anyways? Is it real, and why haven't we fixed it yet? Let me give you the breakdown on it, and explain why employers themselves are the reason its not going away."
-socialImage: "/media/image-2.jpg"
+socialImage: "/media/industry-panel.png"
 ---
  
-Quisque cursus, metus vitae pharetra auctor, sem massa mattis sem, at interdum magna augue eget diam. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Morbi lacinia molestie dui. Praesent blandit dolor. Sed non quam. In vel mi sit amet augue congue elementum.
+The **cybersecurity skills gap** is a [commonly-cited](https://threatpost.com/cybersecurity-skills-gap-career-development/158253/) buzzword referring to the large number of unfilled cybersecurity jobs in the current industry. In other words, the supply is not nearly enough to meet the demand. 
 
-![Nulla faucibus vestibulum eros in tempus. Vestibulum tempor imperdiet velit nec dapibus](/media/image-2.jpg)
+![Nulla faucibus vestibulum eros in tempus. Vestibulum tempor imperdiet velit nec dapibus](/media/industry-panel.png)
 
-Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo. Quisque sit amet est et sapien ullamcorper pharetra. Vestibulum erat wisi, condimentum sed, commodo vitae, ornare sit amet, wisi. Aenean fermentum, elit eget tincidunt condimentum, eros ipsum rutrum orci, sagittis tempus lacus enim ac dui. Donec non enim in turpis pulvinar facilisis. Ut felis. 
+*An industry panel of cybersecurity professionals. Most of them did not start their career in cybersecurity.*
 
-Praesent dapibus, neque id cursus faucibus, tortor neque egestas augue, eu vulputate magna eros eu erat. Aliquam erat volutpat. Nam dui mi, tincidunt quis, accumsan porttitor, facilisis luctus, metus.
+Cybersecurity is not a *new* field persay. It's just being taken seriously for the first time by a lot of companies all at once. That's a good thing, to be clear.
+
+Unfortunately, this is one of those cases where the patient wants the cure, but isn't really willing to pay for it. Most executives that are smart enough to figure out that cybersecurity is important for their company sadly still don't understand that there just aren't that many fully-trained cyber superheros out there that can just swoop in and solve all of your problems. Those are the "skills" that they're searching for and can't find enough of. 
+
+You see, there's actually plenty of potential cybersecurity talent out there, just waiting to bloom, but that's not what companies are actively searching for. Nobody wants to spend the time and money on a new person who doesn't have the training but has the passion, but that's exactly what our industry needs to do if they want to fill these critical roles.
+
+Trust me, as a college student trying to graduate directly into a cybersecurity role, I know there just aren't very many employeers willing to bring on somebody without experience, no matter how much you know about your field. Or in some cases, they expect more schooling than what schools are practically offering for this field right now.
+
+The fact of the matter is, schools are NOT going to supply the degree programs and coursework needed to host a successful cybersecurity program for a long time. The reason why is simple: schools need fully trained cybersecurity professionals to teach those courses even more than industry needs them. Getting schools to create these programs is no less difficult than solving the skills shortage outright. 
+
+There needs to be a different solution, and it starts with companies. There isn't an *invisible market hand* thats going to materialize these experts out of sheer demand, the problem can only be solved by the victim in this case.
+
+Now I know what you're saying. "Aaron, how can companies that have no previous cybersecurity personel train new hires with less experience? It's a chicken and egg situation, isn't it?"
+
+The answer lies with private educators. There are many, *many* cases of technical skill shortage that are met not by formal public education, but by supplimental bootcamp style programs instead. The benefit of these programs is that they can solicit teaching talent easier than public schools because the prerequisites for instructors is much more lax, they can offer more money to attract engaged industry professionals for teaching staff, they can be funded directly by the businesses themselves, and they can offer integration with certification programs that actually have relevence in the field rather than a degree.
+
+They are also much shorter and much less expensive than a degree. As a former TA for a cybersecurity bootcamp at the UC San Diego Extension campus, most candidates are adult learners with no experience at all, that in the course of 20 weeks or so, become fully adjusted, skillful cybersecurity professionals. 
+
+And all it takes for these companies to solve their own problem is to be willing to pay for this kind of education while their new staff is onboarded in their new cybersecurity role.
+
+We're seeing more and more of this kind of investment in human capital, which is an excellent trend, but unfortunately, the widening of the cybersecurity skill gap still currently outpaces the intake of fresh talent. 
+
+By writing this article, I hope to make it more clear to organization that are feeling the effects of the shortage to make the apparently difficult decision to invest in their employees.
+
+In the meantime, our only other option is to keep our skills sharp by continuing to play Capture the Flags. Shoot me an email if you want to play, and we'll shorten the skills gap together.
