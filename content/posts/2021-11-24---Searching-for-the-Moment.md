@@ -1,0 +1,13 @@
+---
+title: Hunting for the Moment
+date: "2021-11-24T00:00:00.000Z"
+template: "post"
+draft: true
+slug: "hunting-for-the-moment"
+category: "Personal Development"
+tags:
+  - "Philosophy"
+  - "Software engineering"
+  - "Career"
+description: "Nobody stays relevant forever, but you can definitely chase it."
+---
