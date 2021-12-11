@@ -12,7 +12,7 @@ My name is **Aaron James**, and I am a software engineer from San Diego, Califor
 
 *Here I am teaching a workshop on web exploitation. As you can see, I am passionate about education and mentorship. See my [links](/pages/links) page for more of the resources I use to teach.*
 
-Ever since I taught myself how to program in 2012, I've been facinated with the structure and design of programs. I use this blog to communicate my musings, which may be related to any of the following:
+Ever since I taught myself how to program in 2012, I've been fascinated with the structure and design of programs. I use this blog to communicate my musings, which may be related to any of the following:
 
 * software design and best practices
 * team management and organizational structure
