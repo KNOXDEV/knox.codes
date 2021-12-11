@@ -1,0 +1,12 @@
+{
+  "presets": [ "@babel/react",
+    "@babel/env",
+    "babel-preset-gatsby",
+    "@babel/flow"
+  ],
+  "plugins": [
+    "@babel/plugin-proposal-optional-chaining",
+    "@babel/plugin-proposal-class-properties",
+    "@babel/plugin-transform-flow-strip-types"
+  ]
+}

@@ -4,7 +4,8 @@ const babelOptions = {
   presets: [
     '@babel/react',
     '@babel/env',
-    'babel-preset-gatsby'
+    'babel-preset-gatsby',
+    '@babel/flow',
   ],
   plugins: [
     '@babel/plugin-proposal-optional-chaining',
