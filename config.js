@@ -20,8 +20,8 @@ module.exports = {
       path: '/pages/about'
     },
     {
-      label: 'Links',
-      path: '/pages/links'
+      label: 'Videos',
+      path: '/pages/videos'
     }
   ],
   author: {

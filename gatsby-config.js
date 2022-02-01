@@ -111,6 +111,7 @@ module.exports = {
               strict: 'ignore'
             }
           },
+          'gatsby-remark-embed-video',
           {
             resolve: 'gatsby-remark-images',
             options: {
@@ -127,7 +128,7 @@ module.exports = {
           'gatsby-remark-copy-linked-files',
           'gatsby-remark-smartypants',
           'gatsby-remark-external-links',
-          `gatsby-plugin-netlify-cms-paths`,
+          'gatsby-plugin-netlify-cms-paths',
         ]
       }
     },
@@ -199,7 +200,7 @@ module.exports = {
         cssLoaderOptions: {
           camelCase: false,
           modules: {
-            exportLocalsConvention: "asIs",
+            exportLocalsConvention: 'asIs',
             namedExport: false
           }
         }
