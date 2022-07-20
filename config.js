@@ -6,7 +6,6 @@ module.exports = {
   title: 'knox.codes',
   subtitle: 'The ramblings of a software engineer, with an emphasis on security.',
   copyright: '© All rights reserved.',
-  disqusShortname: '',
   postsPerPage: 4,
   googleAnalyticsId: '',
   useKatex: true,
