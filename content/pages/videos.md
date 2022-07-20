@@ -7,6 +7,9 @@ socialImage: "/media/image-2.jpg"
 In no particular order, below are some workshops I've recorded for my work with ACM Cyber, the chief cybersecurity
 organization at UC San Diego.
 
+`video: https://www.youtube.com/embed/k94cKH2bNhE`
+
+
 `video: https://www.youtube.com/embed/8eHeWQawdBo`
 
 
