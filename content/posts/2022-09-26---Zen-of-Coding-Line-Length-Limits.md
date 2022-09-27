@@ -1,0 +1,175 @@
+---
+title: Zen of Coding - Line Length Limits
+date: "2022-09-26T00:00:00.000Z"
+template: "post"
+draft: false
+slug: "zen-of-coding-line-length-limits"
+category: "Zen of Coding"
+tags:
+  - "Engineering"
+  - "Training"
+  - "Opinion"
+description: "Let’s talk about line length limits in programming. Common values are 80, 100, 120 characters. What is the correct number of CPL (characters per line) to limit yourself to?"
+---
+
+Let’s talk about line length limits in programming. Common values are 80, 100, 120 characters.
+What is the correct number of CPL (characters per line) to limit yourself to?
+
+This is part of the [Zen of Coding series](/category/zen-of-coding/).
+
+## what does industry do?
+
+Various big-name industry players publish their formatting guidelines for different programming languages.
+Let’s start by just looking at what industry does.
+
+### those in favor of 80 characters
+
+1. [the Google style guide](https://google.github.io/styleguide/cppguide.html#Line_Length) - 
+   cited reason: consistency, tradition
+2. [PEP8](https://peps.python.org/pep-0008/#maximum-line-length) -
+   cited reason: tradition, readability and side-by-side programming
+3. [ESLint](https://eslint.org/docs/latest/rules/max-len) -
+   default value but changeable, unstated reasoning (convention?)
+4. [Prettier](https://prettier.io/docs/en/options.html#print-width) -
+   this is technically a soft wrap at 80, so lines can be longer if they are more readable.
+
+### those in favor of 100 characters
+
+1. [PEP8](https://peps.python.org/pep-0008/#maximum-line-length) -
+   yes, PEP8 recommends 80 characters but also explicitly says 100 characters is fine.
+2. [Google style guide, but only for Java](https://google.github.io/styleguide/javaguide.html#s4.4-column-limit) -
+   unstated reasoning, but implied to be because Java identifies *tend* to be longer,
+   which would lead to more unnecessary line-wrapping.
+3. [Rust](https://gist.github.com/Robbepop/f88d896f859712384039813fab939172#file-rustfmt-toml-L28) -
+   this is a hard wrap at 100 and a soft wrap at 80, unstated reasoning.
+
+### those in favor of 120 characters
+
+1. Jetbrains tools default to 120 characters. No stated reasoning.
+2. [Go](https://go.dev/doc/effective_go#formatting) -
+   ironically, Google imposes no line limit whatsoever on Go.
+   After all, if the cited reason for column limits is “tradition”,
+   and Go is a new, in-house invention, why burden it with tradition?
+
+## argument analysis
+
+Let’s review the various arguments that come into play one at a time.
+
+### consistency and tradition
+
+I can’t necessarily bring myself to stand behind this.
+I do think it’s true that within a single project, standards should be consistent.
+I also think that in a particular team or organization,
+there should be a generally followed standard to prevent friction for developers that work on multiple projects.
+
+That said, I don’t think the fact that 80 characters is the most commonly used is
+sufficient reason alone to adopt the standard. When most organizations that adopt it recursively cite
+“tradition” as the backing reason, that is an example of
+*[argumentum ad populum](https://en.wikipedia.org/wiki/Argumentum_ad_populum)*.
+The friction of going between organizations with standards that differ by
+~20 characters is both infrequent and minor enough to be negligible in my opinion.
+
+I think [this stack overflow answer](https://stackoverflow.com/a/2793525) summarizes the situation the best:
+the primary value of consistent formatting guidelines like line limits isn’t because one is necessarily better,
+it's to limit time-wasting discussion of inconsequential formatting rules.
+**True evil is not an 80 character, 100 character, or 120 character limit,
+but rather making a big deal of it and wasting developer time.**
+
+Linus Torvolds [said as much publicly](https://lkml.org/lkml/2009/12/17/229) nearly 13 years ago.
+[More recently, he also pointed out](https://lkml.org/lkml/2020/5/29/1038) more than a few concrete
+reasons why “tradition” and “convention” are not valid reasons to maintain the 80 character limit.
+This is coming from the guy who still sticks to ANSI C, so I’m inclined to trust his judgement isn’t premature.
+
+In other words, consistency means picking a reasonable limit and sticking to it for as long as it’s reasonable.
+It does not, however, say that a particular limit is better than the others.
+
+To add a bit of my own thoughts: **soft limits are more effective than hard limits**
+because they enforce the standard while eliminating the need for human intervention in minor exceptional cases.
+Let me give a concrete example:
+
+| ![](/media/zen/wrap1.png) |
+|:--:|
+| a line of code just a few characters over the line limit; under a soft limit, this would be left alone |
+
+![](/media/zen/wrap2.png)
+|:--:|
+| the same line after being auto-formatted by PEP8; not unclear, but a change with no benefit |
+
+![](/media/zen/wrap3.png)
+|:--:|
+| if I were to manually reformat this; but in other languages, this doesn’t require a backslash |
+
+This doesn’t mean hard limits shouldn’t exist, but they should:
+
+1. have a higher ceiling and...
+2. never, **ever** be enforced by humans.
+
+Otherwise, you have undermined one of the major benefits of adopting consistency in the first place.
+It should always be the responsibility of *tooling* to complain about formatting problems when it actually matters.
+
+### readability
+
+The most important thing I can note here is that
+[studies have shown again and again](https://www.usability.gov/get-involved/blog/2006/08/line-length-and-onscreen-reading.html)
+that *perception* of readability at various line lengths (aka, reader preference)
+is constantly at odds with actual speed of reading and comprehension.
+
+The bottom line is that longer lines are read faster,
+*regardless* of how the readers feel about it (empirically verified up to 95 CPL).
+
+What *does* negatively impact readability is the need to **horizontally scroll**,
+hence a line limit that prevents the need to do so should be used.
+In the specific situation of needing to read two columns of code side by side on a 4:3 monitor,
+80 characters is the maximum limit. People who read three columns of code at once, use narrow monitors,
+or use exceptionally large fonts are in the very small minority.
+**In most other situations, 100 characters is sufficiently restrictive to prevent horizontal scrolling**.
+
+Setting the line character limit too low will also negatively impact readability.
+This is obvious to understand if you imagine a CPL limit of 40, but it can also happen at a limit of 80 or even 100.
+The most common negative outcome from limiting line length is that variable names will be shortened and comments will be truncated,
+rendering [the purpose of the code less obvious](https://app.works/the-impact-of-naming-conventions-on-code-readability/).
+[Every study shows](https://www.researchgate.net/publication/318036120_Effects_of_Variable_Names_on_Comprehension_An_Empirical_Study)
+this is detrimental to readability.
+
+There are some language-specific elements that affect this argument as well.
+For example, in Java, named identifiers tend to be longer, and as such, may benefit from a longer line length limit.
+[This is exactly what Google does](https://google.github.io/styleguide/javaguide.html#s4.4-column-limit),
+which is an admission that excessively wrapped lines harm readability.
+
+![](/media/zen/java.png)
+|:--:|
+| Java and AspectJ is a beautiful ecosystem |
+
+In other languages, such as Python, newline whitespace has semantic meaning.
+[PEP8 states clearly](https://peps.python.org/pep-0008/#maximum-line-length)
+that backslashed (escaped) newlines should be avoided if implied continuation newlines are possible,
+which is an admission that such additional semantic characters harm readability.
+
+![](/media/zen/newline.png)
+|:--:|
+| what is a natural way to split lines in Java requires backslashes in Python |
+
+Finally, to help concretely illustrate how low CPL limits can negatively impact readability,
+here is an example of a non-contrived (but admittedly selected)
+section of Python code both before and after limiting to 80 characters.
+
+![](/media/zen/100.png)
+|:--:|
+| 100 characters per line (120 in one place) |
+
+![](/media/zen/80.png)
+|:--:|
+| 80 characters per line (as the PEP8 formatter wraps it) |
+
+## verdict
+
+**Set a soft limit of 80/100 characters, create a CI/CD job that auto-wraps lines longer than 100/120 characters,
+and never, ever have a human discussion about it again**.
+If there is disagreement, send them this article.
+If they *still* disagree strongly, then it might be worth a discussion.
+
+---
+
+This is part of a series where I dig up debated software engineering concepts and try to hone in
+on an answer while sharing my research.
+You can find the whole series at the [Zen of Coding](/category/zen-of-coding/).
