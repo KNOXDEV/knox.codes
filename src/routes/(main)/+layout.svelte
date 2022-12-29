@@ -4,9 +4,9 @@
     import {page} from '$app/stores';
 
     let nav = [
-        {path: '/pages/articles', title: 'Articles'},
-        {path: '/pages/about', title: 'About me'},
-        {path: '/pages/videos', title: 'Videos'}
+        {path: '/', title: 'Articles'},
+        {path: '/about', title: 'About me'},
+        {path: '/videos', title: 'Videos'}
     ];
 
 </script>
@@ -20,14 +20,14 @@
 
         <img class="w-20 h-20 mb-4" src="/profile.png" alt="Aaron James">
 
-        <h3 class="font-bold text-xl mb-4">Aaron James</h3>
+        <h4>Aaron James</h4>
 
         <p class="text-gray-500 mb-6">The ramblings of a software engineer, with an emphasis on security.</p>
 
         <ul class="mb-8">
             { #each nav as navItem }
                 <li class="my-2">
-                    <a class={`hover:text-sky-500 hover:border-current border-solid border-b ${navItem.path === $page.url.pathname ? 'border-current' : 'border-transparent'}`}
+                    <a class={`text-zinc-800 hover:border-current border-solid border-b ${navItem.path === $page.url.pathname ? 'border-current' : 'border-transparent'}`}
                        href="{navItem.path}">
                         {navItem.title}
                     </a>

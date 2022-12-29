@@ -1,3 +1,40 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+/* some minorly useful defaults for us */
+
+@layer base {
+    body {
+        @apply text-zinc-800;
+        text-rendering: optimizeLegibility;
+    }
+
+    p {
+        @apply leading-6 mb-6 mt-4;
+    }
+
+    a {
+        @apply text-sky-500;
+    }
+
+    a:hover {
+        @apply text-amber-500 border-solid border-b border-current;
+    }
+
+    h1 {
+        @apply sm:text-4xl font-semibold mb-8 mb-4 text-2xl;
+    }
+
+    h2 {
+        @apply text-3xl font-semibold mb-4;
+    }
+
+    h3 {
+        @apply text-2xl font-semibold mb-4;
+    }
+
+    h4 {
+        @apply font-semibold text-lg mb-4;
+    }
+}
