@@ -9,10 +9,12 @@
         {path: '/videos', title: 'Videos'}
     ];
 
+    $: title = nav.find(item => item.path === $page.url.pathname)?.title;
+
 </script>
 
 <svelte:head>
-    <title>{nav.find(item => item.path === $page.url.pathname).title} - knox.codes</title>
+    <title>{title ? `${title} - ` : ''} knox.codes</title>
 </svelte:head>
 
 <div class="mx-auto max-w-screen-lg">

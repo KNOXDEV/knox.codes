@@ -1,6 +1,7 @@
 <script lang="ts">
     import type {PageData} from './$types';
     import format from 'date-fns/format';
+    import {getSlugFromTag} from "$lib/posts.js";
 
     export let data: PageData;
 
@@ -17,6 +18,14 @@
 
     <div class="text-base">
         <p class="italic">Published {format(metadata.date, 'MMMM do, y')}</p>
+
+        <div class="flex flex-row space-x-4">
+            {#each metadata.tags as tag}
+                <a href="/tag/{getSlugFromTag(tag)}"
+                   class="rounded-full border-solid border px-6 py-2 text-zinc-800">{tag}</a>
+            {/each}
+        </div>
+
         <hr class="my-10"/>
         <p>
             The ramblings of a software engineer, with an emphasis on security. <br/>
