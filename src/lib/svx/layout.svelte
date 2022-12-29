@@ -9,13 +9,11 @@
     /* additional styling just for markdown sections */
 
     .markdown :global(ul) {
-        @apply mb-6 pl-8 list-[square];
+        @apply mb-6 pl-8 list-[square] list-outside;
     }
 
-    .markdown :global(li) {
-        @apply mb-6 pl-8;
-        list-style-type: decimal;
-        list-style-position: inside;
+    .markdown :global(ol) {
+        @apply mb-6 pl-8 list-[decimal] list-outside;
     }
 
     .markdown :global(ul > li), .markdown :global(ol > li) {
@@ -32,6 +30,14 @@
 
     .markdown :global(hr) {
         @apply max-w-xs mx-auto my-12 border-t-4 border-zinc-800;
+    }
+
+    .markdown :global(pre.shiki) {
+        @apply overflow-scroll text-base p-4 rounded bg-slate-600;
+    }
+
+    .markdown :global(:not(.shiki) code) {
+        @apply p-1 rounded bg-slate-200;
     }
 </style>
 

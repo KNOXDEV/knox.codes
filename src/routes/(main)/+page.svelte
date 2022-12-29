@@ -5,7 +5,7 @@
 </script>
 
 {#each data.articles as article}
-    <div class="mb-6">
+    <div class="mb-10">
         <div class="uppercase mb-1 font-semibold text-sm">
             <time class="mr-2">{format(article.date, 'MMMM y')}</time>
             <a href="/category/{article.categorySlug}" class="text-amber-500 hover:text-sky-500">

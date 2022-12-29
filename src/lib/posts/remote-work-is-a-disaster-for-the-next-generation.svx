@@ -1,0 +1,96 @@
+---
+title: Remote Work is a Disaster for the Next Generation of Engineers
+date: "2022-07-20T00:00:00.000Z"
+template: "post"
+draft: false
+slug: "remote-work-is-a-disaster-for-the-next-generation"
+category: "Work"
+tags: ["Engineering", "Remote Work", "Training", "Education"]
+description: "TL;DR: Think of the children!"
+---
+
+There has been much that has been said in technical journalism about the wide reaching and
+“[universally beneficial](https://www.gallup.com/workplace/283985/working-remotely-effective-gallup-research-says-yes.aspx)”
+effects of remote work. I don’t plan on restating any of them.
+Instead, I want to focus on the experiences of junior engineering talent, a perspective that I find is constantly
+ignored in these discussions.
+
+It makes enough sense. Those authoring the published literature are always among the most senior in terms of industry
+experience.
+Their anecdotes are one of greater time savings, more flexibility, a more diverse workforce under them.
+It’s the new normal everybody, nothing to see here, move along, etc.
+
+When I say junior engineering talent, I’m referring to the youngest part of the workforce:
+those in or have just recently graduated college, generally starting their first foray into their career industry.
+Unlike the rest of the workforce, these employees probably have little to no experience working in any office, let alone
+a remote one.
+They often have underdeveloped interpersonal skills and no established industry relationships.
+At the same time, these workers represent the foundation of the next generation of engineers.
+
+They are an investment in the future, but an investment that is being sabotaged by the way that most companies choose to
+approach remote work.
+
+# juniors benefit more from the office
+
+There are two primary reasons why an engineer benefits from coming into the office:
+
+1. getting out of the house (ie, [context switching](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC7535863/) is
+   important)
+2.
+building [stronger interpersonal relationships](https://technical.ly/company-culture/remote-workplace-culture-relationships/)
+with their peers
+
+Both of these benefits are even more critical for junior engineers.
+Freshly graduated talent hasn’t always developed the skill of concentrating on work while still at home.
+Many younger members of the workforce cohabitate due to the cost of living, and distractions multiply and abound.
+Switching context by traveling to the office is one of the best ways to build good work habits and drive daily focus.
+
+More pressing is the issue of developing work relationships.
+Established members of the workforce lose little when making the transition to remote work;
+their work relationships have already been built or at the very least,
+they are comfortable enough in their industry to know how to get things done and communicate with people.
+
+For junior workers who often require frequent attention and mentorship, the remote distance gap can become
+insurmountable.
+What was once a “quick question” in the days of office work is now a Slack-powered back-and-forth where feedback can
+take minutes or hours.
+Acceptable for a seasoned employee to ask an informed, targeted question, but probably more work than its worth for a
+less confident junior.
+
+# juniors benefit less from remote work
+
+Many of the supposed benefits of remote work also simply do not apply to junior engineers.
+
+They do not have the same incentives to be at home that older workers do:
+they are often single and do not have a family to be around or children to watch over.
+The benefit of “being able to work from anywhere” doesn’t really help junior engineers,
+who often don’t really have any way of knowing where they want to settle down anyways.
+
+Even working for a company that offers a hybrid work experience or
+“[optional office attendance](https://www.theatlantic.com/health/archive/2021/05/work-from-home-2-days-a-week/618841/)”
+will not give juniors more benefits than simply being fully remote.
+Remember that office benefit #2 was being able to collaborate in-person with other members of your team.
+If nobody on your team is choosing to come in, then you would get just as much benefit from working out of your local
+library or Starbucks.
+
+Going further, because there aren’t that many people choosing to work in the office anymore,
+there isn’t as much of an incentive to go into the office.
+In extreme cases, engineers that were previously in-person have packed up and moved to distant, cheaper locales to
+[take advantage of income inequality](https://every.to/p/a-brief-history-of-digital-nomads).
+As an engineer, even if I go in, I’m not going to see my coworkers anyway, so why would I go?
+It’s a chicken-egg dilemma. By going remote, Pandora’s box has been opened, and it’s probably impossible to close it at
+this point.
+
+# just support your juniors
+
+**Bottom line**: stop treating all of your workers the same.
+If your business isn’t completely in-person, you need to compensate for
+[the needs of your junior engineers](https://technical.ly/software-development/is-remote-work-hurting-junior-developers-tech/).
+
+1. Provide your employees with a colocation budget to spend on getting out of the house. Many companies already do this
+   for their workforce.
+2. Proactively train and assign direct mentors to your new hires.
+3. Reduce or eliminate all sources of friction or delay when a junior needs to ask a question.
+
+There’s no need to stop the inevitable march towards remote work: it makes economic sense.
+That said, it’s time that businesses start to listen to the needs of the next generation of workers.

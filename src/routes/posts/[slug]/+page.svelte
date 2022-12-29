@@ -10,7 +10,7 @@
 
 <div class="md:fixed left-12 -top-6 grid justify-items-center mt-10"><a href="/">← All Articles</a></div>
 
-<div class="mx-auto max-w-screen-md post px-4 max-w-prose text-lg leading-relaxed">
+<div class="mx-auto max-w-screen-md post max-w-prose sm:px-0 px-4 text-lg leading-relaxed">
     <h1 class="sm:text-5xl text-center mt-12 mb-8 sm:leading-tight">{metadata.title}</h1>
 
     <svelte:component this={component} class="post"/>

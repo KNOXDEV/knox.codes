@@ -41,5 +41,6 @@ export interface PostMetadata {
 	title: string;
 	description: string;
 	category: string;
+	draft: boolean;
 	date: Date;
 }
