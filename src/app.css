@@ -11,7 +11,7 @@
     }
 
     p {
-        @apply leading-6 mb-6 mt-4;
+        @apply mb-6 mt-4 leading-relaxed;
     }
 
     a {

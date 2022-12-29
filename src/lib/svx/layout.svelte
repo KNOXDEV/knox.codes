@@ -29,6 +29,10 @@
     .markdown :global(h3) {
         @apply mt-12;
     }
+
+    .markdown :global(hr) {
+        @apply max-w-xs mx-auto my-12 border-t-4 border-zinc-800;
+    }
 </style>
 
 <div class="markdown">
