@@ -11,6 +11,7 @@ function getXmlForPath(path: string): string {
 }
 
 const metadata = getAllPostMetadata();
+const pages = [...Array(Math.ceil(metadata.length / 4)).keys()].slice(1);
 const slugs = metadata.map((md) => md.slug);
 const tags = [...new Set(metadata.flatMap((md) => md.tags).map(getSlugFromTag))];
 const categories = [...new Set(metadata.map((md) => getSlugFromTag(md.category)))];
@@ -28,6 +29,10 @@ export const GET = () => {
       xmlns:video="https://www.google.com/schemas/sitemap-video/1.1"
     >
       ${['/', '/videos', '/about'].map(getXmlForPath).join('\n')}
+      ${pages
+				.map((pageNum) => `/page/${pageNum}`)
+				.map(getXmlForPath)
+				.join('\n')}
       ${slugs
 				.map((slug) => `/posts/${slug}`)
 				.map(getXmlForPath)
