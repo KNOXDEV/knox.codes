@@ -1,21 +1,11 @@
-<script>
+<script lang="ts">
     import MediaIcon from "./MediaIcon.svelte";
 
     import {page} from '$app/stores';
+    import type {PageData} from './$types';
 
-    let nav = [
-        {path: '/', title: 'Articles'},
-        {path: '/about', title: 'About me'},
-        {path: '/videos', title: 'Videos'}
-    ];
-
-    $: title = nav.find(item => item.path === $page.url.pathname)?.title;
-
+    export let data: PageData;
 </script>
-
-<svelte:head>
-    <title>{title ? `${title} - ` : ''} knox.codes</title>
-</svelte:head>
 
 <div class="mx-auto max-w-screen-lg">
     <div class="float-left p-10 sm:w-1/3 w-full">
@@ -27,7 +17,7 @@
         <p class="text-gray-500 mb-6">The ramblings of a software engineer, with an emphasis on security.</p>
 
         <ul class="mb-8">
-            { #each nav as navItem }
+            { #each data.nav as navItem }
                 <li class="my-2">
                     <a class={`text-zinc-800 hover:border-current border-solid border-b ${navItem.path === $page.url.pathname ? 'border-current' : 'border-transparent'}`}
                        href="{navItem.path}">

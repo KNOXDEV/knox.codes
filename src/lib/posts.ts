@@ -1,5 +1,5 @@
 import parseISO from 'date-fns/parseISO';
-import type {SvelteComponent} from 'svelte';
+import type { SvelteComponent } from 'svelte';
 
 const modules = await import.meta.glob(`$lib/posts/*.svx`);
 
@@ -18,7 +18,7 @@ export function getSlugFromPath(path: string): string {
 export async function getPostBySlug(slug: string): Promise<Post | undefined> {
 	if (!postsBySlug[slug]) return;
 
-	const {default: component, metadata} = (await postsBySlug[slug]()) as {
+	const { default: component, metadata } = (await postsBySlug[slug]()) as {
 		default: SvelteComponent;
 		metadata: { [key: string]: string };
 	};
@@ -44,9 +44,10 @@ export interface Post {
 export interface PostMetadata {
 	title: string;
 	description: string;
+	socialImage: string;
 	category: string;
 	draft: boolean;
 
-	tags: string[]
+	tags: string[];
 	date: Date;
 }

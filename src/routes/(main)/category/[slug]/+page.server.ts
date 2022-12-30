@@ -13,6 +13,10 @@ export const load: PageServerLoad = ({ params }) => {
 
 	return {
 		category,
-		articles: articlesInCategory
+		articles: articlesInCategory,
+		seo: {
+			title: category,
+			description: `Articles within the ${category} category.`
+		}
 	};
 };

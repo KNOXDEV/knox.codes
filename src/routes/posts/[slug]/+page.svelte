@@ -4,9 +4,7 @@
     import {getSlugFromTag} from "$lib/posts.js";
 
     export let data: PageData;
-
     let {post: {metadata, component}} = data;
-
 </script>
 
 <div class="md:fixed left-12 -top-6 grid justify-items-center mt-10"><a href="/">← All Articles</a></div>
