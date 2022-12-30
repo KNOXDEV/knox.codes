@@ -9,6 +9,16 @@ template.
 
 **Final time-to-implement**: 14 hours, 45 minutes start-to-finish.
 
+## how it works
+
+Just add a markdown blog article into the [`src/lib/posts`](src/lib/posts) folder.
+They will automatically be precompiled to Svelte components and rendered on the site.
+
+Metadata supplied in the so-called "frontmatter" of the markdown will be used to
+categorize and tag the articles, which can then be used to filter articles on the site.
+
+Weirdly **I will accept pull requests on this blog** if somebody wants to post something.
+
 ## technologies
 
 * [SvelteKit](https://kit.svelte.dev/) - frontend and backend metaframework.
@@ -24,12 +34,13 @@ template.
 ## features
 
 1. Hybrid SSR/CSR that comes with Svelte.
-2. SEO-friendly `meta` tags and automatically generating `/sitemap.xml`.
-3. Automatically generating rss feed at `/rss.xml`.
-4. Pagination of articles.
-5. Generated browsing of articles by tags and categories.
-6. Graceful 404 and error pages.
-7. Themeable code-highlighting using Shiki, along with homebrew line numbers and line highlighting.
+2. Write blog articles in markdown with code, latex, and even full Svelte components embedded.
+3. SEO-friendly `meta` tags and automatically generating `/sitemap.xml`.
+4. Automatically generating rss feed at `/rss.xml`.
+5. Pagination of articles.
+6. Generated browsing of articles by tags and categories.
+7. Graceful 404 and error pages.
+8. Themeable code-highlighting using Shiki, along with homebrew line numbers and line highlighting.
 
 ### todo
 
