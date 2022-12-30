@@ -11,7 +11,7 @@ For example, my GitHub username is **KNOXDEV**, and my blog is [knox.codes](http
 
 *Here I am teaching a workshop on web exploitation.
 As you can see, I am passionate about education and mentorship.
-See my [videos](/pages/videos) page for more of the resources I use to teach.*
+See my [videos](/videos) page for more of the resources I use to teach.*
 
 Ever since I taught myself how to program in 2012, I’ve been fascinated with the structure and design of programs.
 I use this blog to communicate my musings, which may be related to any of the following:
