@@ -17,10 +17,10 @@
     <div class="text-base">
         <p class="italic">Published {format(metadata.date, 'MMMM do, y')}</p>
 
-        <div class="flex flex-row space-x-4">
+        <div class="flex flex-row flex-wrap gap-4">
             {#each metadata.tags as tag}
                 <a href="/tag/{getSlugFromTag(tag)}"
-                   class="rounded-full border-solid border px-6 py-2 text-zinc-800">{tag}</a>
+                   class="rounded-full border-solid border px-6 py-2 text-zinc-800 whitespace-nowrap">{tag}</a>
             {/each}
         </div>
 
