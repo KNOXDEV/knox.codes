@@ -1,5 +1,5 @@
-import parseISO from 'date-fns/parseISO';
-import type {SvelteComponent} from 'svelte';
+import parseISO from 'date-fns/parseISO/index';
+import type { SvelteComponent } from 'svelte';
 
 export function getSlugFromPath(path: string): string {
 	const basename = path.split(/[\\/]/).pop() ?? path;
@@ -14,7 +14,7 @@ export async function getPostBySlug(slug: string): Promise<Post | undefined> {
 
 	if (!postsBySlug[slug]) return;
 
-	const {default: component, metadata} = (await postsBySlug[slug]()) as {
+	const { default: component, metadata } = (await postsBySlug[slug]()) as {
 		default: SvelteComponent;
 		metadata: { [key: string]: string };
 	};

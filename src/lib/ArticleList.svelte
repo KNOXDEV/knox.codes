@@ -1,6 +1,6 @@
 <script lang="ts">
     import type {PostMetadata} from "$lib/posts";
-    import format from "date-fns/format";
+    import format from "date-fns/format/index";
     import {getSlugFromTag} from "$lib/posts.js";
 
     export let articles: PostMetadata;

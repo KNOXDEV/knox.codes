@@ -1,6 +1,6 @@
 <script lang="ts">
     import type {PageData} from './$types';
-    import format from 'date-fns/format';
+    import format from 'date-fns/format/index';
     import {getSlugFromTag} from "$lib/posts.js";
 
     export let data: PageData;
