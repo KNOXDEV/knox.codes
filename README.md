@@ -1,38 +1,42 @@
-# create-svelte
+# knox.codes
 
-Everything you need to build a Svelte project, powered by [`create-svelte`](https://github.com/sveltejs/kit/tree/master/packages/create-svelte).
+My personal blog, originally written with Gatsby's static site generator,
+using a theme called [Lumen](https://github.com/alxshelepenok/gatsby-starter-lumen/).
 
-## Creating a project
+This new version of the blog has been rewritten, this time from "scratch", primarily using Svelte.
+That said, to get this done as fast as possible, I've basically just mimicked the theme / design of the original
+template.
 
-If you're seeing this, you've probably already done this step. Congrats!
+**Final time-to-implement**: 14 hours, 45 minutes start-to-finish.
 
-```bash
-# create a new project in the current directory
-npm create svelte@latest
+## technologies
 
-# create a new project in my-app
-npm create svelte@latest my-app
-```
+* [SvelteKit](https://kit.svelte.dev/) - frontend and backend metaframework.
+* [TypeScript](https://www.typescriptlang.org/) - it's 2022.
+* [TailwindCSS](https://tailwindcss.com/) - atomic css framework for brevity.
+* [MDsveX](https://github.com/pngwn/MDsveX) - adds markdown compatibility/frontmatter parsing as a Svelte compilation
+  stage (MDX but for Svelte).
+  Makes it so I can write my blog in mostly markdown and not go insane.
+* [Shiki](https://github.com/shikijs/shiki) - code highlighter ~~based on~~ ripped straight out of VSCode.
+  Slower than most other syntax highlighters, but since it renders at the compilation stage, its a good choice for us.
+* [Vercel](https://vercel.com/) - free "Jamstack" deployment platform.
 
-## Developing
+## features
 
-Once you've created a project and installed dependencies with `npm install` (or `pnpm install` or `yarn`), start a development server:
+1. Hybrid SSR/CSR that comes with Svelte.
+2. SEO-friendly `meta` tags and automatically generating `/sitemap.xml`.
+3. Automatically generating rss feed at `/rss.xml`.
+4. Pagination of articles.
+5. Generated browsing of articles by tags and categories.
+6. Graceful 404 and error pages.
+7. Themeable code-highlighting using Shiki, along with homebrew line numbers and line highlighting.
 
-```bash
-npm run dev
+### todo
 
-# or start the server and open the app in a new browser tab
-npm run dev -- --open
-```
+Mostly for my personal notes.
 
-## Building
-
-To create a production version of your app:
-
-```bash
-npm run build
-```
-
-You can preview the production build with `npm run preview`.
-
-> To deploy your app, you may need to install an [adapter](https://kit.svelte.dev/docs/adapters) for your target environment.
+- [ ] rss feed html content for readers.
+- [ ] pagination for tags and categories pages.
+- [ ] line numbers and line highlighting for Shiki (half done).
+- [ ] other pages for project / technology showcases (basically copy Matei).
+- [ ] ~~service worker bitcoin miner~~
