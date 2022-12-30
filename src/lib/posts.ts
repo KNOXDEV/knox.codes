@@ -48,6 +48,8 @@ export interface PostMetadata {
 	category: string;
 	draft: boolean;
 
+	slug: string;
+
 	tags: string[];
 	date: Date;
 }
