@@ -2,9 +2,13 @@
     import MediaIcon from "./MediaIcon.svelte";
 
     import {page} from '$app/stores';
-    import type {PageData} from './$types';
 
-    export let data: PageData;
+    const nav = [
+        {path: '/', title: 'Articles'},
+        {path: '/about', title: 'About me'},
+        {path: '/videos', title: 'Videos'}
+    ];
+
 </script>
 
 <div class="mx-auto max-w-screen-lg">
@@ -17,7 +21,7 @@
         <p class="text-gray-500 mb-6">The ramblings of a software engineer, with an emphasis on security.</p>
 
         <ul class="mb-8">
-            { #each data.nav as navItem }
+            { #each nav as navItem }
                 <li class="my-2">
                     <a class={`text-zinc-800 hover:border-current border-solid border-b ${navItem.path === $page.url.pathname ? 'border-current' : 'border-transparent'}`}
                        href="{navItem.path}">

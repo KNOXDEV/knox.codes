@@ -4,4 +4,4 @@
     export let data;
 </script>
 
-<ArticleList articles={data.articles} nextLink={data.nextLink}/>
+<ArticleList articles={data.articles} previousLink={data.previousLink} nextLink={data.nextLink}/>

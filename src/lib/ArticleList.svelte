@@ -4,6 +4,8 @@
     import {getSlugFromTag} from "$lib/posts.js";
 
     export let articles: PostMetadata;
+    export let previousLink: string;
+    export let nextLink: string;
 </script>
 
 {#each articles as article}
@@ -23,3 +25,14 @@
         <a class="text-sky-500 border-solid border-current hover:border-b" href="/posts/{article.slug}">Read</a>
     </div>
 {/each}
+
+<div class="grid grid-cols-2">
+    <div class="text-left">
+        <a class="uppercase text-amber-500 hover:text-sky-500 font-bold text-3xl {previousLink || 'pointer-events-none text-gray-400'}"
+           href="{previousLink}">← Prev</a>
+    </div>
+    <div class="text-right">
+        <a class="uppercase text-amber-500 hover:text-sky-500 font-bold text-3xl {nextLink || 'pointer-events-none text-gray-400'}"
+           href="{nextLink}">Next →</a>
+    </div>
+</div>

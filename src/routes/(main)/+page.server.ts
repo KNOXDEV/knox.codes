@@ -5,6 +5,7 @@ const articles = getAllPostMetadata();
 
 export const load: PageServerLoad = () => {
 	return {
-		articles
+		articles: articles.slice(0, 4),
+		nextLink: articles.length > 4 && '/page/1'
 	};
 };
