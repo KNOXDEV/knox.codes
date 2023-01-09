@@ -43,6 +43,23 @@
     .markdown :global(blockquote) {
         @apply border-l-4 border-solid pl-4 text-zinc-600;
     }
+
+    .markdown :global(table) {
+        @apply table-auto w-full text-sm mt-4 mb-6;
+    }
+
+    .markdown :global(th) {
+        @apply uppercase text-xs py-3;
+    }
+
+    .markdown :global(tr) {
+        @apply border-b;
+    }
+
+    .markdown :global(td) {
+        @apply py-3;
+    }
+
 </style>
 
 <div class="markdown">

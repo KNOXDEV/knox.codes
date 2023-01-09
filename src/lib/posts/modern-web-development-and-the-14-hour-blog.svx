@@ -109,11 +109,11 @@ additional advantage of being able to directly compare the old technology you al
 
 As it turns out, *design is most of the work of web development*. And I'm not just talking about UI or upfront design.
 There's a huge difference between having a completed design for a website and having a working version to work off of.
-After all, software development is not simply a process of writing code, it is largely an adventure of discovery of the
-problem you are trying to solve as you work on it.
+After all, software development is not simply a process of writing code, it is largely an adventure of discovering the
+problem you are trying to solve _as_ you work on it.
 
 Having the working version of **knox.codes** on standby made it extremely simply to see what I had successfully done
-and what was left. Just because I didn't copy any code doesn't mean it wasn't 1000x easier than it would have been
+and what was left. Just because I didn't copy any code doesn't mean it wasn't 1000 times easier than it would have been
 otherwise.
 
 ### Svelte is actually pretty cool
@@ -179,7 +179,38 @@ This may all sound like criticism, and while this approach comes with its own le
 a lot of benefits. And in my case, **rewriting this blog is the ultimate example of an app that fits almost
 perfectly along Svelte's "happy path"**. It is directly due to Svelte that development was much faster.
 
+Using `cloc`, we can quantify this:
 
+| Language   |  files |   blank | comment |    code |
+|:-----------|-------:|--------:|--------:|--------:|
+| TypeScript |     12 |      41 |       7 |     244 |
+| Svelte     |     13 |      54 |       1 |     212 |
+| CSS        |      1 |       9 |       1 |      30 |
+| HTML       |      1 |       0 |       0 |      12 |
+| **SUM**    | **27** | **104** |   **9** | **498** |
 
+Compared to the old Gatsby codebase that I admittedly didn't write:
+
+| Language   |  files |   blank | comment |     code |
+|:-----------|-------:|--------:|--------:|---------:|
+| JavaScript |     73 |     183 |      73 |     1665 |
+| SCSS       |     24 |     175 |      22 |      702 |
+| **SUM**    | **97** | **358** |  **95** | **2367** |
+
+Ignoring that I am worse at commenting my code, a **~79% reduction in lines of code** is honestly comical.
+I can complain about Svelte's "magic" or lack of comprehensive documentation all day,
+but there is something to be said about its performance in its own problem space.
+If nothing else, Svelte was definitely the correct tool for this kind of job.
+
+---
+
+If this was an article about Svelte, I would go deep on my specific criticisms. Svelte is but one tool of a
+swirling, unknowable vortex of web development frameworks and paradigms. To constantly stay on top of every
+`www.*.io` that hits HackerNews would be a full time job.
+
+That said, I think it's important for us as engineers to always be learning *something*.
+It doesn't _have_ to be the hot new thing, but honestly, that is not the worst metric you could use.
+The secret to learning and sticking with a new tool regularly is to be selfish: only learn what you
+can put into immediate, self-benefiting application. **Only enrich your resume if it will also enrich your life**.
 
 
