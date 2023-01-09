@@ -169,7 +169,7 @@ which creates what is known in software design as a
 [cursed problem](https://www.gdcvault.com/play/1025756/Cursed-Problems-in-Game). Cursed problems do not have solutions,
 since they arise from a conflict in core promises made to the user. They can only be weaseled around, and the outcome
 of Svelte's cursed problem is typical: **there is a lot of "magic" in Svelte**, and anybody in software development
-knows that is not a complement.
+knows that is not a compliment.
 
 Using Svelte is a lot like writing code in some kind of
 [frequency encoding](https://en.wikipedia.org/wiki/Huffman_coding): common tasks and functionality are as

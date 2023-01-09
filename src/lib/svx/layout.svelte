@@ -33,7 +33,7 @@
     }
 
     .markdown :global(pre.shiki) {
-        @apply overflow-scroll text-base p-4 rounded bg-slate-600;
+        @apply overflow-auto text-base p-4 rounded bg-slate-600;
     }
 
     .markdown :global(:not(.shiki) code) {
