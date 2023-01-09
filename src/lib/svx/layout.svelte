@@ -39,6 +39,10 @@
     .markdown :global(:not(.shiki) code) {
         @apply p-1 rounded bg-slate-200;
     }
+
+    .markdown :global(blockquote) {
+        @apply border-l-4 border-solid pl-4 text-zinc-600;
+    }
 </style>
 
 <div class="markdown">

@@ -1,0 +1,185 @@
+---
+title: Modern Web Development and the 14-Hour Blog
+date: "2022-12-17T00:00:00.000Z"
+template: "post"
+draft: false
+category: "Software Design"
+tags: ["DevOps", "Svelte", "Web Development"]
+description: "What was once a cutting-edge project can now be scaffolded in a mere 14 hours.
+I will describe my experience building this blog in under a day with SvelteKit."
+---
+
+On December 17th, 2020, I created the website **knox.codes** for a UCSD GenEd class project. I used the open source
+static site generator Gatsby and an existing site template
+called [Lumen](https://github.com/alxshelepenok/gatsby-starter-lumen/)
+to get the site stood up with my content in the 24 hours remaining that my procrastination had left me.
+All the underlying styling and actual programming was done for me; all I had to do is write articles
+(one of which I filled entirely with Lorem Ipsum. Yes, I got the credits).
+
+One of the articles that actually had content
+was [Modern DevOps and the 24-Hour Blog](/posts/modern-devops-and-the-24-hour-blog).
+This article basically just discusses how far the development and DevOps worlds have come
+to deploy a technically sophisticated website like a blog in under 24 hours of work.
+By the way, this article is now *unlisted*, a feature that didn't exist when **knox.codes** was built with Gatsby.
+
+You see, while I was stuck at home with Covid-19 during Christmas,
+I thought, "what better way to burn off frustration then to do some web development"?
+I had already been looking for a good excuse to try out [Svelte](https://svelte.dev/),
+the [sexy new web framework](https://www.youtube.com/watch?v=uEJ-Rnm2yOE) to simp over these days.
+
+I had also been looking to replace Gatsby, since the amount of memory it uses during the compilation
+process [scales with the size of your content](https://www.gatsbyjs.com/docs/how-to/performance/resolving-out-of-memory-issues/).
+With only about 8 articles, Netlify was [no longer capable](https://github.com/gatsbyjs/gatsby/issues/15190)
+of compiling it consistently, leading me
+to [run the build repeatedly](https://github.com/KNOXDEV/knox.codes/commits/old?after=0ac1b7fd92bd2b2d1dbed4c49cf1cc184f963bcc+0&branch=old&qualified_name=refs%2Fheads%2Fold)
+trying to hit the lucky 10% chance of it actually working whenever I wanted to post a new article.
+Believe it or not, this made me less likely to write articles!
+
+So, this article is in a way a tribute to that first one: I want to summarize my approach, the results,
+and give just a couple words on my experience using Svelte.
+
+## approach
+
+Firstly, you can learn everything you want to know by checking out the published source code and documentation
+on [GitHub](https://github.com/KNOXDEV/knox.codes). The key difference between this new version and
+the old one is that this time, I wrote the blog "from scratch", without the use of an existing template,
+primarily using Svelte.
+
+Here are the technologies I used to manage the frontend, types, styling, and other compilation-level goodies that
+Svelte supports:
+
+* [SvelteKit](https://kit.svelte.dev/) - frontend and backend metaframework.
+* [TypeScript](https://www.typescriptlang.org/) - it's 2022.
+* [TailwindCSS](https://tailwindcss.com/) - atomic css framework for brevity.
+* [MDsveX](https://github.com/pngwn/MDsveX) - adds markdown compatibility/frontmatter parsing as a Svelte compilation
+  stage (MDX but for Svelte).
+  Makes it so I can write my blog in mostly markdown and not go insane.
+* [Shiki](https://github.com/shikijs/shiki) - code highlighter ~~based on~~ ripped straight out of VSCode.
+  Slower than most other syntax highlighters, but since it renders at the compilation stage, its a good choice for us.
+* [Vercel](https://vercel.com/) - free "Jamstack" deployment platform.
+
+The way posts are supported are similar to how they worked in the original Gatsby blog:
+just add a markdown blog article into
+the [`src/lib/posts`](https://github.com/KNOXDEV/knox.codes/tree/main/src/lib/posts)
+folder. They will automatically be precompiled to Svelte components and rendered on the site.
+
+Metadata supplied in the so-called "frontmatter" of the markdown will be used to
+[categorize and tag](/category/software-design) the articles, which can then be used to filter articles on the site.
+
+## results
+
+Does all this mean it took me even longer this time? Shockingly, *no*, despite needing to rewrite all the
+logic and styling myself, **the final time to implement was only 14 hours, 45 minutes of work start-to-finish**.
+
+Here's the features that we pulled off:
+
+1. Hybrid SSR/CSR that comes with Svelte.
+2. Write blog articles in markdown with code, latex, and even full Svelte components embedded.
+3. SEO-friendly `meta` tags and automatically generating `/sitemap.xml`.
+4. Automatically generating rss feed at `/rss.xml`.
+5. Pagination of articles.
+6. Generated browsing of articles by tags and categories.
+7. Graceful 404 and error pages.
+8. Themeable code-highlighting using Shiki, along with homebrew line numbers and line highlighting.
+
+Now, how exactly were we able to cram in this much functionality while also finishing in less time than the original
+template? Yes, a very small part of it is probably me getting legitimately better at web development in two years, but
+there are some bigger forces at play here.
+
+### devops has grown even more
+
+This was the core theme of my original article, but yes, DevOps has continued to mature further even in the past two
+years. I'm still using a "[jamstack](https://jamstack.org/)" deployment platform, but I've switched
+to [Vercel](https://vercel.com)
+from Netlify, mainly because Vercel is a bit simpler and more robust in my specific experience, and the team
+that built Vercel also wrote Vite and SvelteKit, so the deployment integration between them is intimate and efficient.
+
+Yes, I could have deployed my blog on Kubernetes,
+but [perhaps it's for the best I don't](https://twitter.com/dexhorthy/status/856639005462417409).
+
+### design is _most_ of the work of web development
+
+The most important decision I made when rewriting my blog with Svelte was to **not change anything about the site
+itself**. This changed my goal from "develop a blog" to "create a website that looks and behaves exactly like this other
+one".
+
+This is a common approach I use for learning new technology. Trying to build a new thing with new
+technology is more cognitive load than just trying to build an old thing with new technology. You also get the
+additional advantage of being able to directly compare the old technology you already know with the new.
+
+As it turns out, *design is most of the work of web development*. And I'm not just talking about UI or upfront design.
+There's a huge difference between having a completed design for a website and having a working version to work off of.
+After all, software development is not simply a process of writing code, it is largely an adventure of discovery of the
+problem you are trying to solve as you work on it.
+
+Having the working version of **knox.codes** on standby made it extremely simply to see what I had successfully done
+and what was left. Just because I didn't copy any code doesn't mean it wasn't 1000x easier than it would have been
+otherwise.
+
+### Svelte is actually pretty cool
+
+Here is a quote from my original 2020 article:
+
+> After all, building a website from scratch (without the use of WordPress and the likes) is a deeply complicated,
+> convoluted process.
+>
+> In some ways its easy to learn, but almost impossible to master everything that goes into making a website that not
+> only works, but works *well*, look nice, and doesn't break. Paradoxically, the farther the frontend and backend
+> development worlds accelerate, the more technology they invent to make websites better, the harder it is to start
+> learning about how to actually do any of it.
+
+Svelte, at first glance, appears to exacerbate this issue by being fully incompatible with existing component-based
+frameworks like React and Angular (yet another technology to learn). Looking closer however, it's also fighting against
+this trend in its own small way.
+
+One of its main ~~gimmicks~~ features is that it [presents a syntax familiar](https://svelte.dev/blog/write-less-code)
+to the budding web developer:
+
+```html
+
+<script>
+    export let name = 'KNOXDEV';
+</script>
+
+<style>
+    h1 {
+        font-size: 4rem;
+    }
+</style>
+
+<h1>
+    This is a component belonging to { name }!
+</h1>
+```
+
+By mimicking the feeling of the framework-less web development experience, Svelte maintains a slightly more gentle
+learning curve for the new developer while also reinforcing basic concepts.
+
+Svelte also fights against
+the [trend of web frameworks getting bigger and slower runtimes](https://svelte.dev/blog/virtual-dom-is-pure-overhead).
+It does this by compiling your app to imperative code that surgically mutates your webpage in a minimal and runtime-free
+fashion.
+
+In reality, the above example component gets all the features you would want in a reusable component framework such
+as hybrid server-sided rendering and client-sided rendering, local styles, Typescript and PostCSS preprocessor support,
+and more all at compile time.
+
+Unfortunately, the user promise of being seemingly low-code / simple and powerful / featureful are competing,
+which creates what is known in software design as a
+[cursed problem](https://www.gdcvault.com/play/1025756/Cursed-Problems-in-Game). Cursed problems do not have solutions,
+since they arise from a conflict in core promises made to the user. They can only be weaseled around, and the outcome
+of Svelte's cursed problem is typical: **there is a lot of "magic" in Svelte**, and anybody in software development
+knows that is not a complement.
+
+Using Svelte is a lot like writing code in some kind of
+[frequency encoding](https://en.wikipedia.org/wiki/Huffman_coding): common tasks and functionality are as
+simple to perform as possible, while more infrequent tasks are usually more verbose and require hacky workarounds.
+
+This may all sound like criticism, and while this approach comes with its own learning curve, it also has
+a lot of benefits. And in my case, **rewriting this blog is the ultimate example of an app that fits almost
+perfectly along Svelte's "happy path"**. It is directly due to Svelte that development was much faster.
+
+
+
+
+

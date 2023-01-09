@@ -3,12 +3,10 @@ title: Modern DevOps and the 24 Hour Blog
 date: "2020-12-17T00:00:00.000Z"
 template: "post"
 draft: true
-slug: "modern-devops-and-the-24-hour-blog"
 category: "Software Design"
 tags: ["DevOps", "Gatsby", "React"]
 description: "What was once a highly-technical project can now be scaffolded in a mere 24 hours with no prior knowledge
 or research. I will describe my experience building this blog in under a day with Gatsby."
-socialImage: "/media/devops-graph.png"
 ---
 
 I've been [told](https://www.youtube.com/watch?v=8uW3TNDIcAs) for a long time that in this day and age, there is no
@@ -25,7 +23,7 @@ to actually do any of it.
 Fortunately for us, the frontend and backend developer's world isn't the only field that has made incredible strides
 over the past decade.
 
-![a graph of devops areas of concern](/media/devops-graph.png)
+![a graph of devops areas of concern](/24-hour/devops-graph.png)
 
 *Here we are in 2020, and the options available to cut out deployment complexity is astonishing.*
 
