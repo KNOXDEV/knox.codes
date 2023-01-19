@@ -16,6 +16,14 @@
         @apply mb-6 pl-8 list-[decimal] list-outside;
     }
 
+    .markdown :global(.contains-task-list) {
+        @apply list-none p-0;
+    }
+
+    .markdown :global(.task-list-item > input) {
+        @apply mx-1;
+    }
+
     .markdown :global(ul > li), .markdown :global(ol > li) {
         @apply pl-2 mb-3;
     }
