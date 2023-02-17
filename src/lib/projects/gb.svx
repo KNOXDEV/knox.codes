@@ -1,0 +1,12 @@
+---
+title: gb.rs
+status: WIP
+link: https://github.com/KNOXDEV/gb
+tags: ['Rust', 'Fun', 'Systems']
+---
+
+Gameboy emulator in Rust. I don't have a lot of time to work on this so there isn't much.
+Current notable features are:
+
+* no heap allocation, trivial to run in embedded or kernel-level environments
+* game ROMs can be decoded at compile time and shipped with the binary (!!)

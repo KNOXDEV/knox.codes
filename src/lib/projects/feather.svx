@@ -1,0 +1,16 @@
+---
+title: feather
+status: COMPLETE
+link: https://github.com/KNOXDEV/feather
+tags: ['Java', 'Graphics', 'Algorithms', 'Math']
+---
+
+A minimalist LWJGL helper library mostly for 2D interfaces that makes render code extremely terse.
+Notable features are:
+
+* a string rendering engine
+* basic animation library
+* color format conversion 
+* efficient tesselation with Vertex Buffer Objects
+
+I wrote this one back when I was 16 so don't go too hard on me.

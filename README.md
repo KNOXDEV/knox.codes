@@ -41,6 +41,7 @@ Weirdly **I will accept pull requests on this blog** if somebody wants to post s
 6. Generated browsing of articles by tags and categories.
 7. Graceful 404 and error pages.
 8. Themeable code-highlighting using Shiki, along with homebrew line numbers and line highlighting.
+9. New "Projects" page with tagged filtering and supporting Markdown components.
 
 ### todo
 
@@ -49,5 +50,5 @@ Mostly for my personal notes.
 - [ ] rss feed html content for readers.
 - [ ] pagination for tags and categories pages.
 - [ ] line numbers and line highlighting for Shiki (half done).
-- [ ] other pages for project / technology showcases (basically copy Matei).
+- [x] other pages for project / technology showcases (basically copy Matei).
 - [ ] ~~service worker bitcoin miner~~

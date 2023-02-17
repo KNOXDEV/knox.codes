@@ -1,0 +1,19 @@
+---
+title: Terraform CTF Challenge Module
+status: RELEASED
+link: https://github.com/KNOXDEV/terraform-kubernetes-ctf-chal
+tags: ['Terraform', 'Kubernetes', 'CTF', 'Infrastructure', 'Scripts', 'Python', 'Docker']
+---
+
+A Terraform module that allows for a cloud-agnostic deployment of a dockerized CTF challenge to a Kubernetes cluster.
+Sounds made-up, but it's easily the best way to deploy a CTF challenge to a k8s cluster with features that aren't
+available in any other solution:
+
+* process and player isolation (via nsjail)
+* sandbox filesystems (via ssh tunnelling)
+* hardware resource restrictions
+* autoscaling to meet fluctuating demand
+* healthchecks (catch pod degradation)
+
+This allows CTF challenge authors to adhere to build challenges that just work, then deploy to the cloud and
+get security for free.

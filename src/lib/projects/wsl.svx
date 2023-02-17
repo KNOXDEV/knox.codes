@@ -1,0 +1,11 @@
+---
+title: wsl
+status: COMPLETE
+link: https://github.com/KNOXDEV/wsl
+linkLabel: Check out on GitHub
+tags: ['Scoop', 'Powershell', 'Scripts']
+---
+
+A scoop bucket for single-command installation of Window Subsystem for Linux distros, without Windows Store.
+
+Since Microsoft has sort of added this to base Windows, I don't maintain this anymore.

@@ -1,0 +1,10 @@
+---
+title: scoop-backup
+status: COMPLETE
+link: https://github.com/KNOXDEV/scoop-backup
+tags: ['Scoop', 'Powershell', 'Scripts']
+---
+
+A PowerShell script that backs up all of your installed [Scoop](https://scoop.sh/) packages for easy reinstallation later.
+
+This functionality has since been added into the main Scoop repository, so I don't maintain this anymore.

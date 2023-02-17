@@ -28,7 +28,7 @@ export const GET = () => {
       xmlns:image="https://www.google.com/schemas/sitemap-image/1.1"
       xmlns:video="https://www.google.com/schemas/sitemap-video/1.1"
     >
-      ${['/', '/videos', '/about'].map(getXmlForPath).join('\n')}
+      ${['/', '/videos', '/about', '/projects'].map(getXmlForPath).join('\n')}
       ${pages
 				.map((pageNum) => `/page/${pageNum}`)
 				.map(getXmlForPath)

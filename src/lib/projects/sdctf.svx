@@ -1,0 +1,14 @@
+---
+title: San Diego CTF
+status: COMPLETE
+link: https://github.com/acmucsd/sdctf-2022
+tags: ['CTF', 'Infrastructure', 'Hacking']
+---
+
+In 2021, I founded and created San Diego CTF, the global-scale, 48-hour hacking competition hosted by UC San Diego.
+
+Across SDCTF [2021](https://github.com/acmucsd/sdctf-2021) and [2022](https://github.com/acmucsd/sdctf-2022), 
+I authored over 40 different hacking challenges across eight different categories such as Crypto, Web, and Forensics.
+I was also responsible for the deployment and management of said challenges and
+the organisation of the team that helped create them.
+

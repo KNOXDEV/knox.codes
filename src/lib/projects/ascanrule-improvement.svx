@@ -1,0 +1,18 @@
+---
+title: OWASP Zap's Blind Injection Detection
+status: COMPLETE
+link: https://github.com/zaproxy/zap-extensions/pull/4173
+tags: ['Hacking', 'Networking', 'Algorithms', 'Math']
+---
+
+I wrote the current algorithm used for OWASP Zap's time-based blind command injection detection.
+
+OWASP Zap is the world's most widely used open source attack proxy for penetration testing.
+After identifying issues during a scan with the previous naive approach, I discussed the shortcomings
+with the [Zap developer team](https://groups.google.com/g/zaproxy-develop/c/KGSkNHlLtqk),
+and we agreed on a proposal that I then implemented.
+
+It uses a custom [simple linear regression](https://en.wikipedia.org/wiki/Simple_linear_regression)
+algorithm to statistically determine if an increment in payload delay correlates to an increment in actual delay.
+It has been optimized to ensure the fewest possible number of requests are sent, and is highly resistant to
+both false positives and negatives.

@@ -6,7 +6,8 @@
     const nav = [
         {path: '/', title: 'Articles'},
         {path: '/about', title: 'About me'},
-        {path: '/videos', title: 'Videos'}
+        {path: '/projects', title: 'Projects'},
+        {path: '/videos', title: 'Videos'},
     ];
 
 </script>

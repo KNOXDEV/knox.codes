@@ -1,0 +1,11 @@
+---
+title: knox.codes
+status: RELEASED
+link: https://github.com/KNOXDEV/knox.codes
+tags: ['Svelte', 'TypeScript', 'Web', 'CSS', 'HTML', 'JavaScript']
+---
+
+The site you're currently reading is written from scratch using SvelteKit,
+TypeScript, TailwindCSS, and other popular web technologies.
+
+This version is rewrite #4 in the grand history of the knox.codes blog.

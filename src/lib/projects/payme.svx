@@ -1,0 +1,12 @@
+---
+title: PAYME.yaml
+status: WIP
+link: https://github.com/payme-yaml/payme-yaml
+tags: ['Sustainability', 'Policy']
+---
+
+An open source, standardized file format for open source projects to declare how to
+financially support their contributors.
+
+I am passionate about the problem space of open source sustainability, but I find it hard to have the
+necessary time to spare. If you are interested in seeing this idea fleshed out, please get a hold of me.

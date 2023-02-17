@@ -1,0 +1,11 @@
+---
+title: rank.py
+status: RELEASED
+link: https://github.com/KNOXDEV/rank.py
+tags: ['Python', 'Algorithms', 'Fun']
+---
+
+This is a no-dependency python script that allows humans to interactively sort small-to-medium sized lists at
+maximum theoretical efficiency. I then used this to win an argument.
+
+Normalize creating and publishing tiny dumb scripts that do one thing.

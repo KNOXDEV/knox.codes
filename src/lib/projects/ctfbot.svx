@@ -1,0 +1,13 @@
+---
+title: ctfbot
+status: COMPLETE
+link: https://github.com/acmucsd/ctfbot
+tags: ['CTF', 'PostgreSQL', 'TypeScript', 'JavaScript', 'Data Visualization', 'Discord']
+---
+
+Discord bot that facilitates an entire Capture the Flag hacking competition:
+managing teams, presenting challenges, handling flag submissions, tracking points, generating leaderboards,
+and doing so all within the confines of a Discord server with no external software.
+
+Official CTF platform of San Diego CTF. If you want to see what this looked like in 2022,
+[check out the server](https://discord.gg/nNk5Q2rTMA).

@@ -1,0 +1,16 @@
+---
+title: Chariot
+status: COMPLETE
+link: https://github.com/ucsd-cse125-sp22/cse125-sp22-group1
+tags: ['Rust', 'Graphics', 'Networking', 'Fun']
+---
+
+Chariot is a 3D, real-time networked game built from scratch in Rust.
+It was made as part of UC San Diego's [CSE 125](https://cse125.ucsd.edu/2022/groups.html)
+over the course of 10 weeks. Chariot is a "chair racing game" where the audience
+can vote with their phones during the game to change the rules of the game while the race is happening.
+
+My primary contributions were to the overall project structure, realtime networking, and adding a 
+string renderer for our custom engine.
+
+You can watch a live demo [here](https://www.youtube.com/watch?v=iDiPYyJkVA8).

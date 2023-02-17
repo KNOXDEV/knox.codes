@@ -1,0 +1,11 @@
+---
+title: pc-setup.sh
+status: RELEASED
+link: https://github.com/KNOXDEV/pc-setup
+tags: ['Scripts', 'Fun', 'Bash', 'Linux']
+---
+
+This is the set of scripts I use for post-installation setup of Debian 11 for personal computer use.
+By publishing this on GitHub, I can clone the repo from a new computer and just run it to get about 70% of the way set up.
+
+This inadvertently has the effect of documenting the software I use. Feel free to poke around.
