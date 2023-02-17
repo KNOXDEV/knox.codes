@@ -13,7 +13,7 @@ export const load: PageServerLoad = ({ params }) => {
 	if (sliceIndex >= articles.length) throw error(400);
 
 	const previousLink = sliceIndex - 4 <= 0 ? '/' : `/page/${index - 1}`;
-	const nextLink = sliceIndex + 4 > articles.length ? '' : `/page/${index + 1}`;
+	const nextLink = sliceIndex + 4 >= articles.length ? '' : `/page/${index + 1}`;
 
 	return {
 		articles: articles.slice(sliceIndex, sliceIndex + 4),
