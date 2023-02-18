@@ -1,9 +1,8 @@
 import type { PageLoad } from './$types';
 import {getAllProjects} from "$lib/projects";
 
-const projects = getAllProjects();
-
-export const load: PageLoad = () => {
+export const load: PageLoad = async () => {
+	const projects = await getAllProjects();
 	return {
 		projects
 	};

@@ -18,30 +18,27 @@ const STATUS: { [key: string]: ProjectStatus } = {
     },
 }
 
-const modules = await import.meta.glob(`$lib/projects/*.svx`);
+export async function getAllProjects(): Promise<Project[]> {
+    const modules = await import.meta.glob(`$lib/projects/*.svx`);
 
-const projects = (await Promise.all(
-    Object.entries(modules).map(async ([, resolver]) => {
-        const {default: component, metadata} = (await resolver()) as {
-            default: SvelteComponent;
-            metadata: ProjectMetadata & { status: string; };
-        };
-        return {
-            component,
-            metadata: {
-                ...metadata,
-                tags: metadata.tags?.map(tag => tag.toLowerCase()),
-                status: STATUS[metadata.status] ?? STATUS['COMPLETE']
-            }
-        };
-    })
-)) as unknown as Project[];
+    const projects = (await Promise.all(
+        Object.entries(modules).map(async ([, resolver]) => {
+            const {default: component, metadata} = (await resolver()) as {
+                default: SvelteComponent;
+                metadata: ProjectMetadata & { status: string; };
+            };
+            return {
+                component,
+                metadata: {
+                    ...metadata,
+                    tags: metadata.tags?.map(tag => tag.toLowerCase()),
+                    status: STATUS[metadata.status] ?? STATUS['COMPLETE']
+                }
+            };
+        })
+    )) as unknown as Project[];
 
-const sortedProjects = [...projects]
-    .sort((a, b) => a.metadata.title.localeCompare(b.metadata.title));
-
-export function getAllProjects(): Project[] {
-    return sortedProjects;
+    return projects.sort((a, b) => a.metadata.title.localeCompare(b.metadata.title));
 }
 
 export interface ProjectStatus {
