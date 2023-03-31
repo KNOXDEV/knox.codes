@@ -1,0 +1,13 @@
+---
+title: lazy-scripts
+status: RELEASED
+link: https://github.com/KNOXDEV/lazy-scripts
+tags: ['Scripts', 'Fun', 'Bash', 'Linux', 'Python']
+---
+
+I like writing self-contained scripts that do things for me.
+What I don't like is manually handling adding the script to my path, adding a crafted desktop entry,
+remembering to give sudo privs if applicable, creating a shortcut for it,
+and managing scripting language specific quirks per script.
+
+This small project allows you to just throw the script in a folder, run `lazy-scripts`, and it handles all that for you.
