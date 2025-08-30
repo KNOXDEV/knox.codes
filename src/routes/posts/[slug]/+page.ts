@@ -6,7 +6,7 @@ export const load: PageLoad = async ({ params }) => {
 	const post = await getPostBySlug(params.slug);
 
 	if (!post) {
-		throw error(404);
+		error(404);
 	}
 
 	return {
