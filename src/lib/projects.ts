@@ -1,61 +1,60 @@
-import type {SvelteComponent} from 'svelte';
+import type { SvelteComponent } from 'svelte';
 
 const STATUS: { [key: string]: ProjectStatus } = {
-    COMPLETE: {
-        text: 'Complete',
-        description: 'This project is complete and will not be worked on.',
-        colorClass: 'text-zinc-400'
-    },
-    RELEASED: {
-        text: 'Released',
-        description: 'This project is released and is still being worked on.',
-        colorClass: 'text-sky-400'
-    },
-    WIP: {
-        text: 'Work in Progress',
-        description: 'This project is being worked on and has not yet been released.',
-        colorClass: 'text-amber-400'
-    },
-}
+	COMPLETE: {
+		text: 'Complete',
+		description: 'This project is complete and will not be worked on.',
+		colorClass: 'text-zinc-400'
+	},
+	RELEASED: {
+		text: 'Released',
+		description: 'This project is released and is still being worked on.',
+		colorClass: 'text-sky-400'
+	},
+	WIP: {
+		text: 'Work in Progress',
+		description: 'This project is being worked on and has not yet been released.',
+		colorClass: 'text-amber-400'
+	}
+};
 
 export async function getAllProjects(): Promise<Project[]> {
-    const modules = await import.meta.glob(`$lib/projects/*.svx`);
+	const modules = await import.meta.glob(`$lib/projects/*.svx`);
 
-    const projects = (await Promise.all(
-        Object.entries(modules).map(async ([, resolver]) => {
-            const {default: component, metadata} = (await resolver()) as {
-                default: SvelteComponent;
-                metadata: ProjectMetadata & { status: string; };
-            };
-            return {
-                component,
-                metadata: {
-                    ...metadata,
-                    tags: metadata.tags?.map(tag => tag.toLowerCase()),
-                    status: STATUS[metadata.status] ?? STATUS['COMPLETE']
-                }
-            };
-        })
-    )) as unknown as Project[];
+	const projects = (await Promise.all(
+		Object.entries(modules).map(async ([, resolver]) => {
+			const { default: component, metadata } = (await resolver()) as {
+				default: SvelteComponent;
+				metadata: ProjectMetadata & { status: string };
+			};
+			return {
+				component,
+				metadata: {
+					...metadata,
+					tags: metadata.tags?.map((tag) => tag.toLowerCase()),
+					status: STATUS[metadata.status] ?? STATUS['COMPLETE']
+				}
+			};
+		})
+	)) as unknown as Project[];
 
-    return projects.sort((a, b) => a.metadata.title.localeCompare(b.metadata.title));
+	return projects.sort((a, b) => a.metadata.title.localeCompare(b.metadata.title));
 }
 
 export interface ProjectStatus {
-    text: string;
-    description: string;
-    colorClass: string;
+	text: string;
+	description: string;
+	colorClass: string;
 }
 
-
 export interface Project {
-    component: SvelteComponent;
-    metadata: ProjectMetadata;
+	component: SvelteComponent;
+	metadata: ProjectMetadata;
 }
 
 export interface ProjectMetadata {
-    title: string;
-    status: ProjectStatus;
-    link: string;
-    tags: string[];
+	title: string;
+	status: ProjectStatus;
+	link: string;
+	tags: string[];
 }

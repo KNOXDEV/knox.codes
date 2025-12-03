@@ -1,7 +1,7 @@
 <script lang="ts">
-    import ArticleList from "$lib/ArticleList.svelte";
+	import ArticleList from '$lib/ArticleList.svelte';
 
-    export let data;
+	export let data;
 </script>
 
-<ArticleList articles={data.articles} nextLink={data.nextLink}/>
+<ArticleList articles={data.articles} nextLink={data.nextLink} />

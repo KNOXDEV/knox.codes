@@ -5,36 +5,36 @@
 /* some minorly useful defaults for us */
 
 @layer base {
-    body {
-        @apply text-zinc-800;
-        text-rendering: optimizeLegibility;
-    }
+	body {
+		@apply text-zinc-800;
+		text-rendering: optimizeLegibility;
+	}
 
-    p {
-        @apply mb-6 mt-4 leading-relaxed;
-    }
+	p {
+		@apply mb-6 mt-4 leading-relaxed;
+	}
 
-    a {
-        @apply text-sky-500;
-    }
+	a {
+		@apply text-sky-500;
+	}
 
-    a:hover {
-        @apply text-amber-500 border-solid border-b border-current;
-    }
+	a:hover {
+		@apply text-amber-500 border-solid border-b border-current;
+	}
 
-    h1 {
-        @apply sm:text-4xl font-semibold mb-8 mb-4 text-2xl;
-    }
+	h1 {
+		@apply sm:text-4xl font-semibold mb-8 mb-4 text-2xl;
+	}
 
-    h2 {
-        @apply text-3xl font-semibold mb-4;
-    }
+	h2 {
+		@apply text-3xl font-semibold mb-4;
+	}
 
-    h3 {
-        @apply text-2xl font-semibold mb-4;
-    }
+	h3 {
+		@apply text-2xl font-semibold mb-4;
+	}
 
-    h4 {
-        @apply font-semibold text-lg mb-4;
-    }
+	h4 {
+		@apply font-semibold text-lg mb-4;
+	}
 }

@@ -21,15 +21,15 @@ Weirdly **I will accept pull requests on this blog** if somebody wants to post s
 
 ## technologies
 
-* [SvelteKit](https://kit.svelte.dev/) - frontend and backend metaframework.
-* [TypeScript](https://www.typescriptlang.org/) - it's 2022.
-* [TailwindCSS](https://tailwindcss.com/) - atomic css framework for brevity.
-* [MDsveX](https://github.com/pngwn/MDsveX) - adds markdown compatibility/frontmatter parsing as a Svelte compilation
+- [SvelteKit](https://kit.svelte.dev/) - frontend and backend metaframework.
+- [TypeScript](https://www.typescriptlang.org/) - it's 2022.
+- [TailwindCSS](https://tailwindcss.com/) - atomic css framework for brevity.
+- [MDsveX](https://github.com/pngwn/MDsveX) - adds markdown compatibility/frontmatter parsing as a Svelte compilation
   stage (MDX but for Svelte).
   Makes it so I can write my blog in mostly markdown and not go insane.
-* [Shiki](https://github.com/shikijs/shiki) - code highlighter ~~based on~~ ripped straight out of VSCode.
+- [Shiki](https://github.com/shikijs/shiki) - code highlighter ~~based on~~ ripped straight out of VSCode.
   Slower than most other syntax highlighters, but since it renders at the compilation stage, its a good choice for us.
-* [Vercel](https://vercel.com/) - free "Jamstack" deployment platform.
+- [Vercel](https://vercel.com/) - free "Jamstack" deployment platform.
 
 ## features
 
