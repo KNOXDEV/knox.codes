@@ -1,8 +1,13 @@
-<script>
+<script lang="ts">
 	import '../app.css';
 	import { page } from '$app/stores';
+	interface Props {
+		children?: import('svelte').Snippet;
+	}
 
-	$: seo = $page.data.seo || {};
+	let { children }: Props = $props();
+
+	let seo = $derived($page.data.seo || {});
 </script>
 
 <svelte:head>
@@ -16,4 +21,4 @@
 	<link rel="sitemap" type="application/xml" href="/sitemap.xml" />
 </svelte:head>
 
-<slot />
+{@render children?.()}

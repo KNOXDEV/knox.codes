@@ -1,13 +1,23 @@
 <script lang="ts">
 	import type { ProjectStatus } from '$lib/projects';
 
-	export let link = '';
-	export let title = 'Project Name';
-	export let status: ProjectStatus = {
+	interface Props {
+		link?: string;
+		title?: string;
+		status?: ProjectStatus;
+		children?: import('svelte').Snippet;
+	}
+
+	let {
+		link = '',
+		title = 'Project Name',
+		status = {
 		text: 'Unset',
 		description: 'Unset',
 		colorClass: ''
-	};
+	},
+		children
+	}: Props = $props();
 </script>
 
 <div class="mb-10">
@@ -23,6 +33,6 @@
 		</span>
 	</h3>
 	<div class="mb-4 leading-6 text-gray-800 text-base">
-		<slot />
+		{@render children?.()}
 	</div>
 </div>

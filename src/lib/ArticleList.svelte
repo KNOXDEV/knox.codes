@@ -3,9 +3,13 @@
 	import format from 'date-fns/format/index';
 	import { getSlugFromTag } from '$lib/posts.js';
 
-	export let articles: PostMetadata;
-	export let previousLink: string;
-	export let nextLink: string;
+	interface Props {
+		articles: PostMetadata;
+		previousLink: string;
+		nextLink: string;
+	}
+
+	let { articles, previousLink, nextLink }: Props = $props();
 </script>
 
 {#each articles as article}

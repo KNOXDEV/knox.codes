@@ -1,4 +1,12 @@
-<script context="module">
+<script lang="ts">
+	interface Props {
+		children?: import('svelte').Snippet;
+	}
+
+	let { children }: Props = $props();
+</script>
+
+<script module>
 	import img from './img.svelte';
 	import a from './a.svelte';
 
@@ -6,7 +14,7 @@
 </script>
 
 <div class="markdown">
-	<slot />
+	{@render children?.()}
 </div>
 
 <style>

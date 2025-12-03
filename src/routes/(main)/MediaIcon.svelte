@@ -1,6 +1,10 @@
-<script>
-	export let link = '';
-	export let icon = 'linkedin';
+<script lang="ts">
+	interface Props {
+		link?: string;
+		icon?: string;
+	}
+
+	let { link = '', icon = 'linkedin' }: Props = $props();
 
 	const paths = {
 		linkedin:

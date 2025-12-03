@@ -1,7 +1,12 @@
 <script lang="ts">
 	import MediaIcon from './MediaIcon.svelte';
 
-	import { page } from '$app/stores';
+	import { page } from '$app/state';
+	interface Props {
+		children?: import('svelte').Snippet;
+	}
+
+	let { children }: Props = $props();
 
 	const nav = [
 		{ path: '/', title: 'Articles' },
@@ -26,7 +31,7 @@
 				<li class="my-2">
 					<a
 						class={`text-zinc-800 hover:border-current border-solid border-b ${
-							navItem.path === $page.url.pathname ? 'border-current' : 'border-transparent'
+							navItem.path === page.url.pathname ? 'border-current' : 'border-transparent'
 						}`}
 						href={navItem.path}
 					>
@@ -49,6 +54,6 @@
 		<p class="text-gray-400 text-sm">&copy; All rights reserved.</p>
 	</div>
 	<div class="p-10 float-left sm:w-2/3 w-full">
-		<slot />
+		{@render children?.()}
 	</div>
 </div>
