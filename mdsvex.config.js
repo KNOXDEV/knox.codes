@@ -1,5 +1,6 @@
 import { defineMDSveXConfig as defineConfig } from 'mdsvex';
 import shiki from 'shiki';
+import path from "path";
 import parseRange from 'parse-numeric-range';
 
 // if we don't replace curly braces with html escape codes, svelte will choke on code
@@ -50,7 +51,7 @@ const config = defineConfig({
 		}
 	},
 
-	layout: './src/lib/svx/layout.svelte',
+	layout: path.join(import.meta.dirname, "./src/lib/svx/layout.svelte"),
 
 	remarkPlugins: [],
 	rehypePlugins: []
