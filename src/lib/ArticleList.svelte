@@ -24,12 +24,12 @@
 			</a>
 		</div>
 		<h2>
-			<a class="text-zinc-800" href="/posts/{article.slug}">
+			<a class="text-zinc-800 hover:text-amber-500" href="/posts/{article.slug}">
 				{article.title}
 			</a>
 		</h2>
 		<p class="mb-4 leading-6 text-gray-800 text-base">{article.description}</p>
-		<a class="text-sky-500 border-solid border-current hover:border-b" href="/posts/{article.slug}"
+		<a class="text-sky-500 hover:text-amber-500 border-solid border-current hover:border-b" href="/posts/{article.slug}"
 			>Read</a
 		>
 	</div>

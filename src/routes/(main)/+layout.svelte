@@ -30,7 +30,7 @@
 			{#each nav as navItem}
 				<li class="my-2">
 					<a
-						class={`text-zinc-800 hover:border-current border-solid border-b ${
+						class={`text-zinc-800 hover:text-amber-500 hover:border-current border-solid border-b ${
 							navItem.path === page.url.pathname ? 'border-current' : 'border-transparent'
 						}`}
 						href={navItem.path}

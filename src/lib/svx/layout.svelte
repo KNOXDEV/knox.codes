@@ -18,6 +18,7 @@
 </div>
 
 <style>
+	@reference "tailwindcss";
 	/* additional styling just for markdown sections */
 
 	.markdown :global(ul) {

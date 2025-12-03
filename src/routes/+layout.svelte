@@ -1,12 +1,12 @@
 <script lang="ts">
-	import '../app.css';
+	import './layout.css';
 	import { page } from '$app/stores';
+
 	interface Props {
 		children?: import('svelte').Snippet;
 	}
 
 	let { children }: Props = $props();
-
 	let seo = $derived($page.data.seo || {});
 </script>
 

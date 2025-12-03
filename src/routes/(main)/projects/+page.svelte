@@ -23,7 +23,7 @@
 		<a
 			onclick={() => onClickTag(tag)}
 			href=""
-			class="rounded-full border-solid border px-4 py-1 text-zinc-800 whitespace-nowrap {currentTag ===
+			class="rounded-full border-solid border px-4 py-1 text-zinc-800 hover:text-amber-500 hover:border-amber-500 whitespace-nowrap {currentTag ===
 			tag
 				? 'text-sky-500 border-sky-500'
 				: ''}">{tag}</a
