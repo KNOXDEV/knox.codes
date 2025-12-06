@@ -1,7 +1,7 @@
 <script lang="ts">
 	import A from './a.svelte';
 	interface Props {
-		[key: string]: any
+		[key: string]: any;
 	}
 
 	let { ...props }: Props = $props();

@@ -1,16 +1,16 @@
+<script module>
+	import img from './img.svelte';
+	import a from './a.svelte';
+
+	export { img, a };
+</script>
+
 <script lang="ts">
 	interface Props {
 		children?: import('svelte').Snippet;
 	}
 
 	let { children }: Props = $props();
-</script>
-
-<script module>
-	import img from './img.svelte';
-	import a from './a.svelte';
-
-	export { img, a };
 </script>
 
 <div class="markdown">
@@ -22,11 +22,11 @@
 	/* additional styling just for markdown sections */
 
 	.markdown :global(ul) {
-		@apply mb-6 pl-8 list-[square] list-outside;
+		@apply mb-6 list-outside list-[square] pl-8;
 	}
 
 	.markdown :global(ol) {
-		@apply mb-6 pl-8 list-[decimal] list-outside;
+		@apply mb-6 list-outside list-[decimal] pl-8;
 	}
 
 	.markdown :global(.contains-task-list) {
@@ -39,7 +39,7 @@
 
 	.markdown :global(ul > li),
 	.markdown :global(ol > li) {
-		@apply pl-2 mb-3;
+		@apply mb-3 pl-2;
 	}
 
 	.markdown :global(h2) {
@@ -51,15 +51,15 @@
 	}
 
 	.markdown :global(hr) {
-		@apply max-w-xs mx-auto my-12 border-t-4 border-zinc-800;
+		@apply mx-auto my-12 max-w-xs border-t-4 border-zinc-800;
 	}
 
 	.markdown :global(pre.shiki) {
-		@apply overflow-auto text-base p-4 rounded bg-slate-600;
+		@apply overflow-auto rounded bg-slate-600 p-4 text-base;
 	}
 
 	.markdown :global(:not(.shiki) code) {
-		@apply p-1 rounded bg-slate-200;
+		@apply rounded bg-slate-200 p-1;
 	}
 
 	.markdown :global(blockquote) {
@@ -67,11 +67,11 @@
 	}
 
 	.markdown :global(table) {
-		@apply table-auto w-full text-sm mt-4 mb-6;
+		@apply mt-4 mb-6 w-full table-auto text-sm;
 	}
 
 	.markdown :global(th) {
-		@apply uppercase text-xs py-3;
+		@apply py-3 text-xs uppercase;
 	}
 
 	.markdown :global(tr) {

@@ -42,10 +42,7 @@
 		</ul>
 
 		<ul class="mb-8 flex flex-row space-x-1 items-center">
-			<MediaIcon
-				link="https://www.linkedin.com/in/aaron-james-eason"
-				icon="linkedin"
-			/>
+			<MediaIcon link="https://www.linkedin.com/in/aaron-james-eason" icon="linkedin" />
 			<MediaIcon link="https://github.com/KNOXDEV" icon="github" />
 			<MediaIcon link="mailto:nick@knox.codes" icon="email" />
 		</ul>

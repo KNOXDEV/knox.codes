@@ -12,10 +12,10 @@
 		link = '',
 		title = 'Project Name',
 		status = {
-		text: 'Unset',
-		description: 'Unset',
-		colorClass: ''
-	},
+			text: 'Unset',
+			description: 'Unset',
+			colorClass: ''
+		},
 		children
 	}: Props = $props();
 </script>

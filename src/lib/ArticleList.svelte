@@ -29,8 +29,9 @@
 			</a>
 		</h2>
 		<p class="mb-4 leading-6 text-gray-800 text-base">{article.description}</p>
-		<a class="text-sky-500 hover:text-amber-500 border-solid border-current hover:border-b" href="/posts/{article.slug}"
-			>Read</a
+		<a
+			class="text-sky-500 hover:text-amber-500 border-solid border-current hover:border-b"
+			href="/posts/{article.slug}">Read</a
 		>
 	</div>
 {/each}
