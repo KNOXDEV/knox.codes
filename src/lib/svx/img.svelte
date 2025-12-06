@@ -7,7 +7,7 @@
 	let { ...props }: Props = $props();
 </script>
 
-<A isOffsite={true} href={props.src}>
+<A openInNewTab={true} href={props.src}>
 	<img src={props.src} alt={props.alt} {...props} class="mx-auto max-w" />
 </A>
 {#if props.alt}
