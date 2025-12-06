@@ -45,10 +45,9 @@
 			<MediaIcon
 				link="https://www.linkedin.com/in/aaron-james-eason"
 				icon="linkedin"
-				title="LinkedIn"
 			/>
-			<MediaIcon link="https://github.com/KNOXDEV" icon="github" title="GitHub" />
-			<MediaIcon link="mailto:nick@knox.codes" icon="email" title="Email" />
+			<MediaIcon link="https://github.com/KNOXDEV" icon="github" />
+			<MediaIcon link="mailto:nick@knox.codes" icon="email" />
 		</ul>
 
 		<p class="text-gray-400 text-sm">&copy; All rights reserved.</p>

@@ -1,4 +1,4 @@
-import type { SvelteComponent } from 'svelte';
+import type { Component } from 'svelte';
 
 const STATUS: { [key: string]: ProjectStatus } = {
 	COMPLETE: {
@@ -24,7 +24,7 @@ export async function getAllProjects(): Promise<Project[]> {
 	const projects = (await Promise.all(
 		Object.entries(modules).map(async ([, resolver]) => {
 			const { default: component, metadata } = (await resolver()) as {
-				default: SvelteComponent;
+				default: Component;
 				metadata: ProjectMetadata & { status: string };
 			};
 			return {
@@ -48,7 +48,7 @@ export interface ProjectStatus {
 }
 
 export interface Project {
-	component: SvelteComponent;
+	component: Component;
 	metadata: ProjectMetadata;
 }
 

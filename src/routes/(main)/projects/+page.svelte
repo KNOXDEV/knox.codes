@@ -3,12 +3,15 @@
 
 	let currentTag: string | null = $state(null);
 	let { data } = $props();
-	let tags = $derived([...new Set(data.projects.flatMap((project) => project.metadata.tags))].sort());
+	let tags = $derived(
+		[...new Set(data.projects.flatMap((project) => project.metadata.tags))].sort()
+	);
 
-	let projects =
-		$derived(currentTag !== null
-			? data.projects.filter((project) => project.metadata.tags.includes(currentTag))
-			: data.projects);
+	let projects = $derived(
+		data.projects.filter(
+			(project) => currentTag == null || project.metadata.tags.includes(currentTag)
+		)
+	);
 
 	function onClickTag(tag: string) {
 		if (currentTag === tag) currentTag = null;
@@ -22,7 +25,7 @@
 	{#each tags as tag}
 		<a
 			onclick={() => onClickTag(tag)}
-			href=""
+			href={null}
 			class="rounded-full border-solid border px-4 py-1 text-zinc-800 hover:text-amber-500 hover:border-amber-500 whitespace-nowrap {currentTag ===
 			tag
 				? 'text-sky-500 border-sky-500'

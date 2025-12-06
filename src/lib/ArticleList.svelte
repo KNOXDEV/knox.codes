@@ -5,8 +5,8 @@
 
 	interface Props {
 		articles: PostMetadata[];
-		previousLink: string;
-		nextLink: string;
+		previousLink?: string;
+		nextLink?: string;
 	}
 
 	let { articles, previousLink, nextLink }: Props = $props();
