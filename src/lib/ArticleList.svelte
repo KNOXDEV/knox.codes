@@ -12,7 +12,7 @@
 	let { articles, previousLink, nextLink }: Props = $props();
 </script>
 
-{#each articles as article}
+{#each articles as article (article.slug)}
 	<div class="mb-10">
 		<div class="uppercase mb-1 font-semibold text-sm">
 			<time class="mr-2">{format(article.date, 'MMMM y')}</time>

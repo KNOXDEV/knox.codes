@@ -27,7 +27,6 @@ const config = defineConfig({
 			);
 
 			const theme = options.theme ?? 'github-dark';
-			const numbers = options.numbers ?? false;
 			const highlight = options.highlight ?? '';
 
 			const linesOfCode = (code.match(/\n/g) || []).length + 1;
