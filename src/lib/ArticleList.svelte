@@ -4,7 +4,7 @@
 	import { getSlugFromTag } from '$lib/posts.js';
 
 	interface Props {
-		articles: PostMetadata;
+		articles: PostMetadata[];
 		previousLink: string;
 		nextLink: string;
 	}
