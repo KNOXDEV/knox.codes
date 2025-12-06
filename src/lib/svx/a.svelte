@@ -4,6 +4,7 @@
 		href = '#',
 		// if a link is going offsite, open in a new tab
 		isOffsite = href.includes('://'),
+		children,
 		...remainingProps
 	} = $props();
 </script>
@@ -14,5 +15,5 @@
 	target={isOffsite ? '_blank' : ''}
 	rel={isOffsite ? 'noopener noreferrer' : ''}
 >
-	<slot />
+	{@render children?.()}
 </a>
