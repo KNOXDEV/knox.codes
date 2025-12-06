@@ -17,7 +17,7 @@
 	{@render children?.()}
 </div>
 
-<style>
+<style type="postcss">
 	@reference "tailwindcss";
 	/* additional styling just for markdown sections */
 
