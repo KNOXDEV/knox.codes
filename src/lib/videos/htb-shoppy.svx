@@ -1,0 +1,12 @@
+---
+title: Shoppy - HackTheBox Explained
+videoId: OsQ4uDYqx6A
+date: 2022-11-01
+dateDisplay: November 2022
+series: CTF Walkthrough
+venue: Hack The Box
+duration: '14:24'
+---
+
+A full walkthrough of the Shoppy box: NoSQL injection, credential reuse,
+and a Docker group privilege escalation.

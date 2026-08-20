@@ -1,0 +1,11 @@
+---
+title: How to Attack Networks
+videoId: k94cKH2bNhE
+date: 2022-04-20
+dateDisplay: Spring 2022
+series: Workshop
+venue: ACM Cyber
+duration: '50:12'
+---
+
+How the internet actually works, through the lens of a hacker.

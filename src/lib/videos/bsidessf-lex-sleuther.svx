@@ -1,0 +1,11 @@
+---
+title: Lex Sleuther - A Novel Approach to Script Language Detection
+videoId: 1lvg3b7Vv_4
+date: 2025-04-26
+dateDisplay: April 2025
+series: Conference Talk
+venue: BSidesSF
+duration: '22:28'
+---
+
+Join me as we go far off the beaten path in search of strange and exciting methods of script language detection.

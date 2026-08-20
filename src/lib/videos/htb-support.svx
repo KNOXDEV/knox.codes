@@ -1,0 +1,12 @@
+---
+title: Support - HackTheBox Explained
+videoId: tLn0vVwDxfw
+date: 2023-01-15
+dateDisplay: January 2023
+series: CTF Walkthrough
+venue: Hack The Box
+duration: '21:48'
+---
+
+A full walkthrough of the Support box: LDAP credential extraction from a .NET binary,
+and a resource-based constrained delegation attack against Active Directory.
