@@ -23,9 +23,7 @@
 
 		<h4>Aaron James</h4>
 
-		<p class="text-gray-500 mb-6">
-			The ramblings of a security researcher who likes tooling.
-		</p>
+		<p class="text-gray-500 mb-6">The ramblings of a security researcher who likes tooling.</p>
 
 		<ul class="mb-8">
 			{#each nav as navItem (navItem.path)}
