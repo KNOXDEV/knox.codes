@@ -1,0 +1,17 @@
+---
+title: Lex Sleuther 
+status: COMPLETE
+link: https://github.com/CrowdStrike/lex_sleuther
+tags: ['Hacking', 'Machine Learning', 'CrowdStrike', 'Algorithms']
+---
+
+At CrowdStrike, I created a tool that can read and understand the source code of many script languages
+and will tell you which language a text file is most likely to contain. 
+For more information about its origins, how it works, and what problems it solves, please see the
+[2025 BSidesSF talk about it here](https://www.youtube.com/watch?v=1lvg3b7Vv_4).
+
+The approach here differs greatly from similar projects like guesslang or magika.
+Rather than using a trained ML model, lex_sleuther is actually a lexer for each of the supported languages,
+and counts the different types of tokens and errors encountered.
+These tokens are given weights according to empirical analysis of real samples, and new samples are classified probabilistically.
+
