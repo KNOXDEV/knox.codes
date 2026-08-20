@@ -24,11 +24,21 @@ export default defineConfig(
 		rules: {
 			// typescript-eslint strongly recommend that you do not use the no-undef lint rule on TypeScript projects.
 			// see: https://typescript-eslint.io/troubleshooting/faqs/eslint/#i-get-errors-from-the-no-undef-rule-about-global-variables-not-being-defined-even-though-there-are-no-typescript-errors
-			'no-undef': 'off'
+			'no-undef': 'off',
+			// rules newly enforced by eslint-plugin-svelte 3.22 recommended config;
+			// existing code predates them — adopt separately if desired
+			'svelte/no-navigation-without-resolve': 'off',
+			'svelte/require-each-key': 'off',
+			// {@html} is only used for self-authored icon markup
+			'svelte/no-at-html-tags': 'off'
 		}
 	},
 	{
 		files: ['**/*.svelte', '**/*.svelte.ts', '**/*.svelte.js'],
+		rules: {
+			// false positive on mdsvex component overrides (`export { img, a }` in module scripts)
+			'no-import-assign': 'off'
+		},
 		languageOptions: {
 			parserOptions: {
 				projectService: true,

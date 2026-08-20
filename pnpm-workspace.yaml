@@ -1,0 +1,8 @@
+allowBuilds:
+  '@parcel/watcher': true
+overrides:
+  baseline-browser-mapping: 2.11.13
+  electron-to-chromium: 1.5.405
+  esrap: 2.3.2
+  'magic-string@>=1.0.0': 1.1.1
+  svelte-eslint-parser: 1.8.0

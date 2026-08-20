@@ -1,6 +1,6 @@
 import { getSlugFromPath } from '$lib/posts';
 import type { PostMetadata } from '$lib/posts';
-import parseISO from 'date-fns/parseISO/index';
+import { parseISO } from 'date-fns';
 
 const modules = await import.meta.glob(`$lib/posts/*.svx`);
 

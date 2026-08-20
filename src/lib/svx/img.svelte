@@ -1,13 +1,11 @@
 <script lang="ts">
 	import A from './a.svelte';
-	interface Props {
-		[key: string]: any;
-	}
+	import type { HTMLImgAttributes } from 'svelte/elements';
 
-	let { ...props }: Props = $props();
+	let { ...props }: HTMLImgAttributes = $props();
 </script>
 
-<A openInNewTab={true} href={props.src}>
+<A openInNewTab={true} href={props.src ?? undefined}>
 	<img src={props.src} alt={props.alt} {...props} class="mx-auto max-w" />
 </A>
 {#if props.alt}

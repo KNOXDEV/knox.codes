@@ -1,4 +1,4 @@
-import parseISO from 'date-fns/parseISO/index';
+import { parseISO } from 'date-fns';
 import type { Component } from 'svelte';
 
 export function getSlugFromPath(path: string): string {
