@@ -2,6 +2,7 @@
 	"name": "knox.codes",
 	"version": "1.0.1",
 	"private": true,
+	"packageManager": "pnpm@10.24.0",
 	"scripts": {
 		"dev": "vite dev",
 		"build": "vite build",
