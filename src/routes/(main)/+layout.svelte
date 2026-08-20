@@ -24,7 +24,7 @@
 		<h4>Aaron James</h4>
 
 		<p class="text-gray-500 mb-6">
-			The ramblings of a software engineer, with an emphasis on security.
+			The ramblings of a security researcher who likes tooling.
 		</p>
 
 		<ul class="mb-8">
