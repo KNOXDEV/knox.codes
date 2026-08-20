@@ -1,4 +1,5 @@
 <script lang="ts">
+	import { resolve } from '$app/paths';
 	import layout from './(main)/+layout.svelte';
 
 	const SvelteComponent = $derived(layout);
@@ -10,5 +11,5 @@
 	<h1>Not found</h1>
 
 	<p>Sorry, we're not sure what you're looking for.</p>
-	<a href="/">Click here to go back home.</a>
+	<a href={resolve('/')}>Click here to go back home.</a>
 </SvelteComponent>

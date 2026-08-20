@@ -2,6 +2,7 @@
 	import img from './img.svelte';
 	import a from './a.svelte';
 
+	/* eslint-disable-next-line no-import-assign -- false positive on mdsvex component override re-exports */
 	export { img, a };
 </script>
 

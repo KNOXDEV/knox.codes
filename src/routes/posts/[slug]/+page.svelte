@@ -1,5 +1,6 @@
 <script lang="ts">
 	import type { PageData } from './$types';
+	import { resolve } from '$app/paths';
 	import { format } from 'date-fns';
 	import { getSlugFromTag } from '$lib/posts.js';
 
@@ -14,7 +15,7 @@
 </script>
 
 <div class="md:fixed left-12 -top-6 grid justify-items-center mt-10">
-	<a href="/">← All Articles</a>
+	<a href={resolve('/')}>← All Articles</a>
 </div>
 
 <div class="mx-auto max-w-screen-md post max-w-prose sm:px-0 px-4 text-lg leading-relaxed">
@@ -26,9 +27,9 @@
 		<p class="italic">Published {format(metadata.date, 'MMMM do, y')}</p>
 
 		<div class="flex flex-row flex-wrap gap-4">
-			{#each metadata.tags as tag}
+			{#each metadata.tags as tag (tag)}
 				<a
-					href="/tag/{getSlugFromTag(tag)}"
+					href={resolve('/(main)/tag/[slug]', { slug: getSlugFromTag(tag) })}
 					class="rounded-full border-solid border px-6 py-2 text-zinc-800 whitespace-nowrap"
 					>{tag}</a
 				>

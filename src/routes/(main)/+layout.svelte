@@ -1,6 +1,7 @@
 <script lang="ts">
 	import MediaIcon from './MediaIcon.svelte';
 
+	import { resolve } from '$app/paths';
 	import { page } from '$app/state';
 	interface Props {
 		children?: import('svelte').Snippet;
@@ -9,10 +10,10 @@
 	let { children }: Props = $props();
 
 	const nav = [
-		{ path: '/', title: 'Articles' },
-		{ path: '/about', title: 'About me' },
-		{ path: '/projects', title: 'Projects' },
-		{ path: '/videos', title: 'Videos' }
+		{ path: resolve('/'), title: 'Articles' },
+		{ path: resolve('/about'), title: 'About me' },
+		{ path: resolve('/projects'), title: 'Projects' },
+		{ path: resolve('/videos'), title: 'Videos' }
 	];
 </script>
 
@@ -27,7 +28,7 @@
 		</p>
 
 		<ul class="mb-8">
-			{#each nav as navItem}
+			{#each nav as navItem (navItem.path)}
 				<li class="my-2">
 					<a
 						class={`text-zinc-800 hover:text-amber-500 hover:border-current border-solid border-b ${

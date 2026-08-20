@@ -22,7 +22,7 @@
 
 <div class="mb-10">
 	<h3>
-		<a class="text-zinc-800 mr-1" target="_blank" href={link}>
+		<a class="text-zinc-800 mr-1" target="_blank" rel="external noopener noreferrer" href={link}>
 			{title}
 		</a>
 		<span

@@ -6,7 +6,7 @@
 
 	let { title = 'Click to show', children }: Props = $props();
 	let show = $state(false);
-	let icon = $derived(show ? '&#x2BC6;' : '&#x2BC8;');
+	let icon = $derived(show ? '⯆' : '⯈');
 
 	const toggle = () => {
 		show = !show;
@@ -17,8 +17,7 @@
 	<div>
 		<button
 			onclick={toggle}
-			class="hover:bg-gray-100 active:bg-gray-200 px-1.5 rounded-md grow-0 mr-1"
-			>{@html icon}</button
+			class="hover:bg-gray-100 active:bg-gray-200 px-1.5 rounded-md grow-0 mr-1">{icon}</button
 		>
 	</div>
 	<div>

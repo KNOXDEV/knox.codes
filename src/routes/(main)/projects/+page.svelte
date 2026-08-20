@@ -22,7 +22,7 @@
 <h1>Projects</h1>
 
 <div class="uppercase mb-8 font-semibold text-xs flex flex-row gap-2 flex-wrap">
-	{#each tags as tag}
+	{#each tags as tag (tag)}
 		<a
 			onclick={() => onClickTag(tag)}
 			href={null}
@@ -34,7 +34,7 @@
 	{/each}
 </div>
 
-{#each projects as project}
+{#each projects as project (project)}
 	<Project {...project.metadata}>
 		<project.component />
 	</Project>
