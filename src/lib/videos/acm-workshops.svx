@@ -1,0 +1,13 @@
+---
+title: ACM Cyber at UC San Diego Workshops
+playlistId: PLANtNl_OqIy8
+thumbnailVideoId: k94cKH2bNhE
+videoCount: 6
+date: 2021-05-09
+dateDisplay: 2020→2022
+series: Workshop
+venue: ACM Cyber
+---
+
+Workshops given while I was a founding director
+of my college cyber student organization. 
