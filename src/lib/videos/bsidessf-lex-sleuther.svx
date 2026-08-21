@@ -3,7 +3,7 @@ title: Lex Sleuther - A Novel Approach to Script Language Detection
 videoId: 1lvg3b7Vv_4
 date: 2025-04-26
 dateDisplay: April 2025
-series: Conference Talk
+series: Talks
 venue: BSidesSF
 duration: '22:28'
 ---

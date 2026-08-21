@@ -5,7 +5,7 @@ thumbnailVideoId: cTs43ZjUACQ
 videoCount: 8
 date: 2022-05-09
 dateDisplay: May 2022
-series: CTF Walkthrough
+series: Writeups
 venue: SDCTF
 ---
 

@@ -3,7 +3,7 @@ title: Shoppy - HackTheBox Explained
 videoId: OsQ4uDYqx6A
 date: 2022-11-01
 dateDisplay: November 2022
-series: CTF Walkthrough
+series: Writeups
 venue: Hack The Box
 duration: '14:24'
 ---

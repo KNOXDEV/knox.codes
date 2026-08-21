@@ -3,7 +3,7 @@ title: Support - HackTheBox Explained
 videoId: tLn0vVwDxfw
 date: 2023-01-15
 dateDisplay: January 2023
-series: CTF Walkthrough
+series: Writeups
 venue: Hack The Box
 duration: '21:48'
 ---
